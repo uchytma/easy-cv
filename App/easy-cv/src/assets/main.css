@@ -1,0 +1,16 @@
+:root {
+    --color-gray-1: #f5f5f5;
+    --color-gray-2: #c5c5c5;
+    --color-gray-3: #959595;
+    --color-gray-4: #656565;
+    --color-gray-5: #353535;
+
+    --color-lines: var(--color-gray-3);
+    --color-light-background: var(--color-gray-1);
+
+    --border-radius-base: 0.25rem;
+}
+
+body {
+    margin: 0px;
+}
