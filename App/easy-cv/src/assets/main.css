@@ -6,11 +6,22 @@
     --color-gray-5: #353535;
 
     --color-lines: var(--color-gray-3);
-    --color-light-background: var(--color-gray-1);
+    --color-light-background: white;
 
     --border-radius-base: 0.25rem;
 }
 
+html {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    min-height: 100vh;
+    background-color: var(--color-gray-1);
+}
+
 body {
     margin: 0px;
+    min-height: 100vh;
+}
+
+.muted {
+    color: var(--color-gray-4);
 }

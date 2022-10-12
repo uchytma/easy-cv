@@ -1,9 +1,7 @@
 <template>
   <div class="nav-container">
     <div class="nav-wrapper">
-      <a href="javascript:void(0)" @click="() => router.push('/')"
-        >Zavřít editor</a
-      >
+      <a href="javascript:void(0)" @click="() => router.push('/')">Zavřít editor</a>
       <a>Uložit změny</a>
       <div>
         Pozadí:
@@ -19,7 +17,7 @@
 
 <script lang="ts" setup>
 import { useRouter } from "vue-router";
-import { getBackgrounds } from "@/services/backgroundService";
+import { getBackgrounds } from "@/services/background/backgroundService";
 import { useMainAppStore } from "@/stores/mainApp";
 
 const router = useRouter();

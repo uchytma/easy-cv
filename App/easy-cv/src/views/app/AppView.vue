@@ -34,10 +34,11 @@ const MainLayoutStyles = computed(() => {
 
 .main-layout {
   display: grid;
-  grid: auto auto / auto;
+  grid: min-content auto / 700px auto;
   grid-template-areas:
-    "nav"
-    "main";
+    "nav nav"
+    "main empty";
+  min-height: 100vh;
 }
 
 .main-layout > .aside {
@@ -58,7 +59,7 @@ const MainLayoutStyles = computed(() => {
 
 @media (min-width: 1100px) {
   .main-layout {
-    grid: auto auto / 700px 400px auto;
+    grid: min-content auto / 700px 400px auto;
     grid-template-areas:
       "nav nav nav"
       "main aside empty";
