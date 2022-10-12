@@ -11,9 +11,3 @@ import { useMainAppStore } from "@/stores/mainApp";
 import CvSection from "@/components/organisms/CvSection.vue";
 const store = useMainAppStore();
 </script>
-
-<style lang="css" scoped>
-.main-wrapper {
-  margin-top: 0.6rem;
-}
-</style>

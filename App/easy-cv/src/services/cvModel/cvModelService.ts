@@ -73,11 +73,11 @@ export function getDefaultCv(): CvModel {
     guid: "31e9c9c6-6926-4de5-b9b1-43779c336cff",
     text: {
       text: `Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.
-
+             <br><br>
              Programování zůstává nadále mým hlavním zameřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.
-    
+             <br><br>
              Vlastním řidičský průkaz skupiny B.
-    
+             <br><br>
              Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.`,
       linkUrl: null,
       bold: false,

@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import type { CvModelSectionHeader } from "@/services/cvModel/cvModel";
-import HeaderText from "../atoms/HeaderText.vue";
+import HeaderText from "../atoms/BaseHeaderText.vue";
 const props = defineProps<{
   sectionHeader: CvModelSectionHeader;
 }>();
@@ -18,7 +18,7 @@ const props = defineProps<{
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  padding: 1rem 0.6rem;
+  padding: 1.2rem 0.8rem;
   gap: 0.8rem;
 }
 </style>

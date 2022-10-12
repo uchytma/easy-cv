@@ -1,4 +1,6 @@
 import type { HeaderSize } from "../commonTypes/headerSize";
+import type { Icon } from "../commonTypes/icons";
+import type { TextFragment } from "../commonTypes/textFragment";
 
 export type CvModel = {
   sections: CvModelSection[];
@@ -16,15 +18,6 @@ export type CvModelSectionHeader = {
   size: HeaderSize;
 };
 
-export type CvModelIcon = "phone" | "email" | "location" | "linkedin" | "github";
-
-export type CvModelText = {
-  text: string;
-  linkUrl: string | null;
-  bold: boolean;
-  muted: boolean;
-};
-
 export type CvModelItemType = "text" | "textarea" | "panel";
 
 export type CvModelItem = {
@@ -33,23 +26,23 @@ export type CvModelItem = {
 };
 
 export type CvModelItemText = CvModelItem & {
-  icon: CvModelIcon | null;
-  text: CvModelText | null;
-  subtext: CvModelText | null;
+  icon: Icon | null;
+  text: TextFragment | null;
+  subtext: TextFragment | null;
   type: "text";
 };
 
 export type CvModelItemTextarea = CvModelItem & {
-  text: CvModelText;
+  text: TextFragment;
   type: "textarea";
 };
 
 export type CvModelItemPanel = CvModelItem & {
   imageUrl: string | null;
-  title: CvModelText | null;
-  subtitle: CvModelText | null;
-  description: CvModelText | null;
-  longText: CvModelText | null;
+  title: TextFragment | null;
+  subtitle: TextFragment | null;
+  description: TextFragment | null;
+  longText: TextFragment | null;
   rating: number | null;
   type: "panel";
 };

@@ -5,6 +5,8 @@
     --color-gray-4: #656565;
     --color-gray-5: #353535;
 
+    --color-muted: rgba(0, 0, 0, 0.6);
+
     --color-lines: var(--color-gray-3);
     --color-light-background: white;
 
@@ -23,5 +25,17 @@ body {
 }
 
 .muted {
-    color: var(--color-gray-4);
+    color: var(--color-muted);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

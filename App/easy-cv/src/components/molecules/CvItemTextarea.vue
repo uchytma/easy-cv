@@ -1,7 +1,5 @@
 <template>
-  <article class="article">
-    {{ props.item.text?.text }}
-  </article>
+  <article class="article" v-html="props.item.text?.text"></article>
 </template>
 
 <script lang="ts" setup>
@@ -14,7 +12,7 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .article {
-  padding: 0.8rem 0.6rem;
+  padding: 0.8rem 0.8rem;
   text-align: justify;
 }
 </style>
