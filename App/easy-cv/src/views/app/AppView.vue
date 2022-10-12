@@ -51,7 +51,7 @@ const MainLayoutStyles = computed(() => {
 
 .main {
   grid-area: main;
-  margin: 0.6rem;
+  margin: var(--base-gap);
 }
 
 .aside {

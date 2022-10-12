@@ -20,7 +20,7 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .article {
-  padding: 0.8rem 0.8rem;
+  padding: var(--base-gap);
   display: grid;
   grid-template-columns: 30px max-content max-content auto;
   align-items: center;

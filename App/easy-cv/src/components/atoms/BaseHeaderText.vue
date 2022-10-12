@@ -1,12 +1,11 @@
 <template>
-  <component :is="tag"> {{ props.headerText }} </component>
+  <component :is="tag"> <slot></slot> </component>
 </template>
 
 <script lang="ts" setup>
 import type { HeaderSize } from "@/services/commonTypes/headerSize";
 import { computed } from "vue";
 const props = defineProps<{
-  headerText: string;
   size: HeaderSize;
 }>();
 

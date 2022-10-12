@@ -2,13 +2,15 @@
   <div class="item-wrapper">
     <CvItemText v-if="props.item.type === 'text'" :item="(props.item as CvModelItemText)"></CvItemText>
     <CvItemTextarea v-if="props.item.type === 'textarea'" :item="(props.item as CvModelItemTextarea)"></CvItemTextarea>
+    <CvItemPanel v-if="props.item.type === 'panel'" :item="(props.item as CvModelItemPanel)"></CvItemPanel>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { CvModelItem, CvModelItemText, CvModelItemTextarea } from "@/services/cvModel/cvModel";
+import type { CvModelItem, CvModelItemPanel, CvModelItemText, CvModelItemTextarea } from "@/services/cvModel/cvModel";
 import CvItemText from "./CvItemText.vue";
 import CvItemTextarea from "./CvItemTextarea.vue";
+import CvItemPanel from "./CvItemPanel.vue";
 
 const props = defineProps<{
   item: CvModelItem;

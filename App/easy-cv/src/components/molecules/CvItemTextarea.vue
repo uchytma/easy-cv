@@ -12,7 +12,7 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .article {
-  padding: 0.8rem 0.8rem;
+  padding: var(--base-gap);
   text-align: justify;
 }
 </style>

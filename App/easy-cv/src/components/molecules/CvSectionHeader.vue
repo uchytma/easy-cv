@@ -1,6 +1,6 @@
 <template>
   <header class="section-header">
-    <HeaderText :headerText="props.sectionHeader.title" :size="props.sectionHeader.size"></HeaderText>
+    <HeaderText :size="props.sectionHeader.size"> {{ props.sectionHeader.title }}</HeaderText>
     <span class="muted">{{ props.sectionHeader.subtitle }}</span>
   </header>
 </template>

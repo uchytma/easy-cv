@@ -2,7 +2,8 @@
   <div class="nav-container">
     <div class="nav-wrapper">
       <a href="javascript:void(0)" @click="() => router.push('/')">Zavřít editor</a>
-      <a>Uložit změny</a>
+      <a href="javascript:void(0)">Uložit změny</a>
+      <a href="javascript:void(0)">Tisknout</a>
       <div>
         Pozadí:
         <select v-model="store.selectedBackground">
@@ -40,7 +41,7 @@ const store = useMainAppStore();
     position: sticky;
     display: flex;
     margin: 0.6rem;
-    top: 0.6rem;
+    top: var(--base-gap);
     justify-content: flex-end;
   }
 

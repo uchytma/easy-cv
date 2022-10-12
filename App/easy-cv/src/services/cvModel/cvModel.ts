@@ -14,7 +14,7 @@ export type CvModelSection = {
 
 export type CvModelSectionHeader = {
   title: string;
-  subtitle: string;
+  subtitle: string | null;
   size: HeaderSize;
 };
 

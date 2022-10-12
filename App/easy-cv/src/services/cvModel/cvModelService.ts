@@ -1,4 +1,10 @@
-import type { CvModel, CvModelSection, CvModelItemText, CvModelItemTextarea } from "@/services/cvModel/cvModel";
+import type {
+  CvModel,
+  CvModelSection,
+  CvModelItemText,
+  CvModelItemTextarea,
+  CvModelItemPanel,
+} from "@/services/cvModel/cvModel";
 
 /**
  * Returns default cv model, with prefilled sections and items.
@@ -86,7 +92,7 @@ export function getDefaultCv(): CvModel {
     type: "textarea",
   };
 
-  const mainSeciton: CvModelSection = {
+  const mainSection: CvModelSection = {
     guid: "31e9c9c6-6926-4de5-b9b1-43779c336c0c",
     header: {
       title: "Matěj Uchytil",
@@ -96,7 +102,69 @@ export function getDefaultCv(): CvModel {
     items: [phone, email, linkedin, github, address, desc],
   };
 
-  const cv: CvModel = { sections: [mainSeciton] };
+  const eduCvut: CvModelItemPanel = {
+    guid: "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
+    type: "panel",
+    title: {
+      text: "ČVUT - Fakulta informačních technologí",
+      linkUrl: null,
+      bold: false,
+      muted: false,
+    },
+    description: {
+      text: "Softwarové inženýrství",
+      linkUrl: "https://fit.cvut.cz/cs",
+      bold: false,
+      muted: false,
+    },
+    subtitle: {
+      text: "2013 – 2015; studium nedokončeno. Hlavní město Praha, Česká republika",
+      linkUrl: null,
+      bold: false,
+      muted: true,
+    },
+    imageUrl: "/imgs/cvut.png",
+    rating: null,
+    longText: null,
+  };
+
+  const eduSpse: CvModelItemPanel = {
+    guid: "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
+    type: "panel",
+    title: {
+      text: "Střední průmyslová škola elektrotechnická",
+      linkUrl: null,
+      bold: false,
+      muted: false,
+    },
+    description: {
+      text: "Informační technologie",
+      linkUrl: "https://www.uzlabina.cz/",
+      bold: false,
+      muted: false,
+    },
+    subtitle: {
+      text: "2010 – 2013; V Úžlabině 320, Hlavní město Praha, Česká republika",
+      linkUrl: null,
+      bold: false,
+      muted: true,
+    },
+    imageUrl: "/imgs/spse.svg",
+    rating: null,
+    longText: null,
+  };
+
+  const eduSection: CvModelSection = {
+    guid: "aae9c9c6-6926-4de5-b9b1-43779c336c0c",
+    header: {
+      title: "Vzdělání",
+      subtitle: null,
+      size: "normal",
+    },
+    items: [eduCvut, eduSpse],
+  };
+
+  const cv: CvModel = { sections: [mainSection, eduSection] };
 
   return cv;
 }
