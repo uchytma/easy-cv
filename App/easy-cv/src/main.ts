@@ -14,6 +14,8 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faPhoneSquare, faMailBulk, faMapMarked, faLinkedin, faGithub);
 
+import { useMainAppStore } from "@/stores/mainApp";
+
 const app = createApp(App);
 
 app.component("font-awesome-icon", FontAwesomeIcon);
@@ -22,3 +24,5 @@ app.use(createPinia());
 app.use(router);
 
 app.mount("#app");
+
+useMainAppStore().loadDefaultModel(); //called async - not waiting for result

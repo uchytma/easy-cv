@@ -1,5 +1,5 @@
 <template>
-  <article class="article">
+  <article :class="{ 'article-without-icon': !props.item.icon }" class="article">
     <BaseIcon v-if="props.item.icon" :icon="props.item.icon"></BaseIcon>
     <BaseTextFragment v-if="props.item.text" :text-fragment="props.item.text"></BaseTextFragment>
     <BaseItemSeparator v-if="props.item.subtext"></BaseItemSeparator>
@@ -26,4 +26,7 @@ const props = defineProps<{
   align-items: center;
 }
 
+.article-without-icon {
+  grid-template-columns: max-content max-content auto;
+}
 </style>
