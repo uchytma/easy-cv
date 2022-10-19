@@ -1,58 +1,92 @@
 :root {
-    --color-gray-1: #f5f5f5;
-    --color-gray-2: #c5c5c5;
-    --color-gray-3: #959595;
-    --color-gray-4: #656565;
-    --color-gray-5: #353535;
+  --color-gray-1: #f5f5f5;
+  --color-gray-2: #c5c5c5;
+  --color-gray-3: #959595;
+  --color-gray-4: #656565;
+  --color-gray-5: #353535;
 
-    --color-muted: rgba(0, 0, 0, 0.6);
+  --color-muted: rgba(0, 0, 0, 0.6);
 
-    --color-lines: var(--color-gray-3);
-    --color-light-background: white;
+  --color-lines: var(--color-gray-3);
+  --color-light-background: white;
 
-    --border-radius-base: 0.25rem;
+  --border-radius-base: 0.25rem;
 
-    --base-gap: 1rem;
+  --base-gap: 1rem;
 }
 
 html {
-    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-    min-height: 100vh;
-    background-color: var(--color-gray-1);
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+  min-height: 100vh;
+  background-color: var(--color-gray-1);
 }
 
 body {
-    margin: 0px;
-    min-height: 100vh;
+  margin: 0px;
+  min-height: 100vh;
 }
 
 .muted {
-    color: var(--color-muted);
+  color: var(--color-muted);
 }
 
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1 {
-    font-weight: 600;
-    font-size: 25px;
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: 22px;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 h3 {
-    font-size: 16px;
-    margin: 0px;
+  font-size: 1rem;
+  margin: 0px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.cv-item-padding {
+  padding: var(--base-gap);
+}
+
+p {
+    margin: 0;
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 0.6rem;
+}
+
+@media print {
+  html {
+    background-color: white;
+  }
+
+  a {
+    color: black;
+  }
+
+  body {
+    padding: 0px;
+  }
+
+  .cv-item-padding {
+    padding: calc(var(--base-gap) * 0.5);
+  }
 }

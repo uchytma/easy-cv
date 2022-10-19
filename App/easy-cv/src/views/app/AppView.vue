@@ -84,4 +84,16 @@ const MainLayoutStyles = computed(() => {
     grid-template-areas: "nav main aside";
   }
 }
+
+@media print {
+  .main-layout {
+    grid: auto / auto;
+    grid-template-areas: "main";
+  }
+
+  .nav,
+  .aside {
+    display: none;
+  }
+}
 </style>

@@ -16,4 +16,10 @@ const store = useMainAppStore();
   flex-direction: column;
   gap: var(--base-gap);
 }
+
+@media print {
+  .main-wrapper {
+    display: block; /* hack required for 'break-inside: avoid' */
+  }
+}
 </style>

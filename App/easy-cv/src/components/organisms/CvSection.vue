@@ -5,7 +5,7 @@
       <CvItem v-if="props.section.items.length > 0" :item="props.section.items[0]" />
     </div>
     <template v-for="(item, index) in props.section.items" :key="item.guid">
-      <CvItem v-if="index != 0" :item="item" />
+      <CvItem class="item-wrapper" v-if="index != 0" :item="item" />
     </template>
   </section>
 </template>
@@ -32,5 +32,26 @@ const props = defineProps<{
 .section-wrapper > *:not(:last-child),
 .header-and-first-item-wrapper > *:not(:last-child) {
   border-bottom: 1px solid var(--color-lines);
+}
+
+@media print {
+  .section-wrapper,
+  .section-wrapper > *,
+  .header-and-first-item-wrapper > * {
+    border: none !important;
+  }
+
+  .section-wrapper {
+    display: block !important; /* hack required for 'break-inside: avoid' */
+  }
+
+  .section-wrapper:not(:last-of-type) {
+    padding-bottom: 1rem; /* padding do not apply for last item - because it can cause empty last page when print */
+  }
+
+  .header-and-first-item-wrapper,
+  .item-wrapper {
+    break-inside: avoid;
+  }
 }
 </style>

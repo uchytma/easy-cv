@@ -1,5 +1,5 @@
 <template>
-  <header class="section-header">
+  <header class="section-header cv-item-padding">
     <HeaderText :size="props.sectionHeader.size"> {{ props.sectionHeader.title }}</HeaderText>
     <span class="muted">{{ props.sectionHeader.subtitle }}</span>
   </header>
@@ -18,7 +18,6 @@ const props = defineProps<{
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  padding: 1.2rem 0.8rem;
   gap: 0.8rem;
 }
 </style>

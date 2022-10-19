@@ -56,7 +56,7 @@
         {
           "guid": "a6e9c9c6-6926-4de5-b9b1-43779c336caa",
           "text": {
-            "text": "Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  <br><br>        Programování zůstává nadále mým hlavním zameřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.    <br><br>    Vlastním řidičský průkaz skupiny B.<br><br>              Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí."
+            "text": "<p>Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zameřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>"
           },
           "type": "textarea"
         }
@@ -433,7 +433,7 @@
             "muted": true
           },
           "longText": {
-            "text": "B2B aplikace pro srování hypotečních, spotřebitelských a nezajištěných úvěrů. Metodika úvěrů a také přímé online sjednání hypotečního úvěru. <br/><br/>                Účastnil jsem se z velké části návrhových fází projektu z pohledu business funkcionality a následně jsem měl na starost plánování vývoje, převod produktového zadání do zadání pro vývojáře, řešení souvislostí a ošetření edge-cases. Měl jsem odpovědnost za vedení implementačního teamu, volbu architektury, rozdělování práce a řešení případných nejasností v zadání. Spolupracoval jsem na samotné implementaci kritických částí aplikace a také na validaci splnění zadání před předáním."
+            "text": "<p>B2B aplikace pro srování hypotečních, spotřebitelských a nezajištěných úvěrů. Metodika úvěrů a také přímé online sjednání hypotečního úvěru. </p><p>                Účastnil jsem se z velké části návrhových fází projektu z pohledu business funkcionality a následně jsem měl na starost plánování vývoje, převod produktového zadání do zadání pro vývojáře, řešení souvislostí a ošetření edge-cases. Měl jsem odpovědnost za vedení implementačního teamu, volbu architektury, rozdělování práce a řešení případných nejasností v zadání. Spolupracoval jsem na samotné implementaci kritických částí aplikace a také na validaci splnění zadání před předáním.</p>"
           },
           "imageUrl": "/imgs/Doris.png"
         },

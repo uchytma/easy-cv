@@ -1,5 +1,5 @@
 <template>
-  <article :class="{ 'article-without-icon': !props.item.icon }" class="article">
+  <article :class="{ 'article-without-icon': !props.item.icon }" class="article cv-item-padding">
     <BaseIcon v-if="props.item.icon" :icon="props.item.icon"></BaseIcon>
     <BaseTextFragment v-if="props.item.text" :text-fragment="props.item.text"></BaseTextFragment>
     <BaseItemSeparator v-if="props.item.subtext"></BaseItemSeparator>
@@ -20,7 +20,6 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .article {
-  padding: var(--base-gap);
   display: grid;
   grid-template-columns: 30px max-content max-content auto;
   align-items: center;

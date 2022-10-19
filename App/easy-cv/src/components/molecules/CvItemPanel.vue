@@ -1,5 +1,5 @@
 <template>
-  <article class="article-wrapper">
+  <article class="article-wrapper cv-item-padding">
     <div v-if="props.item.imageUrl" class="g-img">
       <img :src="props.item.imageUrl" />
     </div>
@@ -21,7 +21,7 @@
         :text-fragment="props.item.subtitle"
       ></BaseTextFragment>
       <BaseTextFragment
-        class="g-longText"
+        class="g-longText text-justify"
         :allow-html="true"
         v-if="props.item.longText"
         :text-fragment="props.item.longText"
@@ -42,7 +42,6 @@ const props = defineProps<{
 
 <style lang="css" scoped>
 .article-wrapper {
-  padding: var(--base-gap);
   display: grid;
   grid: auto / min-content auto;
   grid-template-areas: "g-img g-text";
@@ -65,15 +64,15 @@ const props = defineProps<{
 
 .g-text {
   grid-area: g-text;
-  margin-bottom: calc(var(--base-gap) * 0.5);
-  display: grid;
-  grid: min-content min-content min-content auto / auto;
+  display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
 .title-wrapper {
   gap: 10px;
   display: flex;
+  align-items: baseline;
 }
 
 .g-longText {

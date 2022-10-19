@@ -1,5 +1,5 @@
 <template>
-  <article class="article" v-html="props.item.text?.text"></article>
+  <article class="article cv-item-padding text-justify" v-html="props.item.text?.text"></article>
 </template>
 
 <script lang="ts" setup>
@@ -9,10 +9,3 @@ const props = defineProps<{
   item: CvModelItemTextarea;
 }>();
 </script>
-
-<style lang="css" scoped>
-.article {
-  padding: var(--base-gap);
-  text-align: justify;
-}
-</style>
