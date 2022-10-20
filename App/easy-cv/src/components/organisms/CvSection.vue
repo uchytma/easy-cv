@@ -1,23 +1,43 @@
 <template>
   <section class="section-wrapper">
     <div class="header-and-first-item-wrapper">
-      <CvSectionHeader :sectionHeader="props.section.header"></CvSectionHeader>
-      <CvItem v-if="props.section.items.length > 0" :item="props.section.items[0]" />
+      <CvSectionHeader
+        @click="headerClick(props.section.header, $event)"
+        :sectionHeader="props.section.header"
+      ></CvSectionHeader>
+      <CvItem
+        @click="headerClick(props.section.items[0], $event)"
+        v-if="props.section.items.length > 0"
+        :item="props.section.items[0]"
+      />
     </div>
     <template v-for="(item, index) in props.section.items" :key="item.guid">
-      <CvItem class="item-wrapper" v-if="index != 0" :item="item" />
+      <CvItem @click="headerClick(item, $event)" class="item-wrapper" v-if="index != 0" :item="item" />
     </template>
   </section>
 </template>
 
 <script lang="ts" setup>
-import type { CvModelSection } from "@/services/cvModel/cvModel";
+import type { CvModelItem, CvModelSection } from "@/services/cvModel/cvModel";
 import CvSectionHeader from "../molecules/CvSectionHeader.vue";
 import CvItem from "../molecules/CvItem.vue";
-
+import { getAbsolutePosition } from "@/services/domUtils/domUtils";
+import type { EventItemSelected } from "@/services/domUtils/eventItemSelected";
 const props = defineProps<{
   section: CvModelSection;
 }>();
+
+const emits = defineEmits<{
+  (e: "onItemSelected", event: EventItemSelected): void;
+}>();
+
+function headerClick(item: CvModelItem, event: Event): void {
+  const target = event.target as HTMLElement;
+  emits("onItemSelected", {
+    item: item,
+    callerPosition: getAbsolutePosition(target, window),
+  });
+}
 </script>
 
 <style lang="css" scoped>

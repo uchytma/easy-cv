@@ -5,7 +5,9 @@
       "header": {
         "title": "Matěj Uchytil",
         "size": "big",
-        "subtitle": "nar. ?.?.????"
+        "subtitle": "nar. ?.?.????",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
+        "type": "header"
       },
       "items": [
         {
@@ -56,7 +58,7 @@
         {
           "guid": "a6e9c9c6-6926-4de5-b9b1-43779c336caa",
           "text": {
-            "text": "<p>Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zameřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>"
+            "text": "<p>Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zaměřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>"
           },
           "type": "textarea"
         }
@@ -66,7 +68,9 @@
       "guid": "1119c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Vzdělání",
-        "size": "normal"
+        "size": "normal",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336caa",
+        "type": "header"
       },
       "items": [
         {
@@ -109,7 +113,9 @@
       "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Jazykové schopnosti",
-        "size": "normal"
+        "size": "normal",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336bbb",
+        "type": "header"
       },
       "items": [
         {
@@ -142,7 +148,9 @@
       "guid": "3339c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Pracovní zkušenosti",
-        "size": "normal"
+        "size": "normal",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336ccc",
+        "type": "header"
       },
       "items": [
         {
@@ -237,7 +245,9 @@
       "guid": "4449c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Odborné znalosti a dovednosti",
-        "size": "normal"
+        "size": "normal",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336ddd",
+        "type": "header"
       },
       "items": [
         {
@@ -415,7 +425,9 @@
       "guid": "3339c9c6-6926-4de5-b9b1-43779c336cdd",
       "header": {
         "title": "Významné projekty",
-        "size": "normal"
+        "size": "normal",
+        "guid": "2229c9c6-6926-4de5-b9b1-43779c336eee",
+        "type": "header"
       },
       "items": [
         {

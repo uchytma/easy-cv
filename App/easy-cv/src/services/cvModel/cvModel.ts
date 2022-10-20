@@ -12,17 +12,18 @@ export type CvModelSection = {
   guid: string;
 };
 
-export type CvModelSectionHeader = {
-  title: string;
-  subtitle: string | null;
-  size: HeaderSize;
-};
-
-export type CvModelItemType = "text" | "textarea" | "panel";
+export type CvModelItemType = "text" | "textarea" | "panel" | "header";
 
 export type CvModelItem = {
   type: CvModelItemType;
   guid: string;
+};
+
+export type CvModelSectionHeader = CvModelItem & {
+  title: string;
+  subtitle: string | null;
+  size: HeaderSize;
+  type: "header";
 };
 
 export type CvModelItemText = CvModelItem & {

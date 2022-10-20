@@ -8,6 +8,7 @@
 <script lang="ts" setup>
 import type { CvModelSectionHeader } from "@/services/cvModel/cvModel";
 import HeaderText from "../atoms/BaseHeaderText.vue";
+
 const props = defineProps<{
   sectionHeader: CvModelSectionHeader;
 }>();
