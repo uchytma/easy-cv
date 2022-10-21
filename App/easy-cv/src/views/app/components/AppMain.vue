@@ -10,14 +10,15 @@
 </template>
 
 <script lang="ts" setup>
-import { useMainAppStore } from "@/stores/mainApp";
 import CvSection from "@/components/organisms/CvSection.vue";
 import type { EventItemSelected } from "@/services/domUtils/eventItemSelected";
 import type { CvModelSection } from "@/services/cvModel/cvModel";
+
+import { useMainAppStore } from "@/stores/mainApp";
 const store = useMainAppStore();
 
 function onItemSelected(event: EventItemSelected, section: CvModelSection): void {
-  console.log("itemSelected", event, section);
+  store.selectedItem = { item: event.item, callerPosition: event.callerPosition, section: section };
 }
 </script>
 

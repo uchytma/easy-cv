@@ -73,6 +73,11 @@ p:not(:last-of-type) {
     margin-bottom: 0.6rem;
 }
 
+.hoverable:hover {
+  cursor: pointer;
+  background-color: var(--color-gray-1) ;
+}
+
 @media print {
   html {
     background-color: white;

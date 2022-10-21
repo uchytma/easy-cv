@@ -1,5 +1,5 @@
 <template>
-  <div class="item-wrapper">
+  <div class="item-wrapper hoverable">
     <CvItemText v-if="props.item.type === 'text'" :item="(props.item as CvModelItemText)"></CvItemText>
     <CvItemTextarea v-if="props.item.type === 'textarea'" :item="(props.item as CvModelItemTextarea)"></CvItemTextarea>
     <CvItemPanel v-if="props.item.type === 'panel'" :item="(props.item as CvModelItemPanel)"></CvItemPanel>

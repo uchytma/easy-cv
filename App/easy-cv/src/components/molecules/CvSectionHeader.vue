@@ -1,5 +1,5 @@
 <template>
-  <header class="section-header cv-item-padding">
+  <header class="section-header cv-item-padding hoverable">
     <HeaderText :size="props.sectionHeader.size"> {{ props.sectionHeader.title }}</HeaderText>
     <span class="muted">{{ props.sectionHeader.subtitle }}</span>
   </header>

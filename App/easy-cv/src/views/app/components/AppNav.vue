@@ -1,9 +1,9 @@
 <template>
   <div class="nav-container">
     <div class="nav-wrapper">
-      <a href="javascript:void(0)" @click="() => router.push('/')">Zavřít editor</a>
-      <a href="javascript:void(0)">Uložit změny</a>
-      <a href="javascript:void(0)">Tisknout</a>
+      <a class="hoverable" href="javascript:void(0)" @click="() => router.push('/')">Zavřít editor</a>
+      <a class="hoverable" href="javascript:void(0)">Uložit změny</a>
+      <a class="hoverable" href="javascript:void(0)">Tisknout</a>
       <div>
         Pozadí:
         <select v-model="store.selectedBackground">
@@ -40,7 +40,6 @@ const store = useMainAppStore();
   .nav-container {
     position: sticky;
     display: flex;
-    margin: 0.6rem;
     top: var(--base-gap);
     justify-content: flex-end;
   }

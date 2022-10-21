@@ -32,7 +32,7 @@ const emits = defineEmits<{
 }>();
 
 function headerClick(item: CvModelItem, event: Event): void {
-  const target = event.target as HTMLElement;
+  const target = event.currentTarget as HTMLElement;
   emits("onItemSelected", {
     item: item,
     callerPosition: getAbsolutePosition(target, window),

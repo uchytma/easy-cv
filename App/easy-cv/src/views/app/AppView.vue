@@ -26,12 +26,6 @@ const MainLayoutStyles = computed(() => {
 </script>
 
 <style lang="css" scoped>
-:root {
-  --width-nav: 100px;
-  --width-main: 700px;
-  --width-aside: 400px;
-}
-
 .main-layout {
   display: grid;
   grid: min-content auto / 700px auto;
@@ -56,6 +50,7 @@ const MainLayoutStyles = computed(() => {
 
 .aside {
   grid-area: aside;
+  margin-top: var(--base-gap);
 }
 
 @media (min-width: 1100px) {
@@ -75,6 +70,9 @@ const MainLayoutStyles = computed(() => {
   .main-layout {
     grid: auto / auto 700px 400px;
     grid-template-areas: "nav main aside";
+  }
+  .aside {
+    margin-right: var(--base-gap);
   }
 }
 
