@@ -2,7 +2,7 @@
   <div class="main-layout" :style="MainLayoutStyles">
     <nav class="nav"><AppNav /></nav>
     <main class="main"><AppMain /></main>
-    <aside class="aside"><AppAside /></aside>
+    <aside v-if="store.selectedItem" class="aside"><AppAside :style="computedStyle" /></aside>
   </div>
 </template>
 
@@ -11,9 +11,10 @@ import AppAside from "./components/AppAside.vue";
 import AppMain from "./components/AppMain.vue";
 import AppNav from "./components/AppNav.vue";
 import { useMainAppStore } from "@/stores/mainApp";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import type { CSSProperties } from "vue";
 
+const refreshKey = ref(0);
 const store = useMainAppStore();
 
 const MainLayoutStyles = computed(() => {
@@ -23,20 +24,32 @@ const MainLayoutStyles = computed(() => {
   }
   return ret;
 });
+
+const computedStyle = computed<CSSProperties>(() => {
+  const ret: CSSProperties = {};
+  if (refreshKey.value >= 0) {
+    //hack for recompute computed style, when resized
+    if (store.selectedItem && window.innerWidth >= 1120) {
+      ret["top"] = `${store.selectedItem.callerPosition.top}px`;
+    }
+  }
+  return ret;
+});
+
+window.addEventListener("resize", () => {
+  refreshKey.value++;
+  console.log(refreshKey);
+});
 </script>
 
 <style lang="css" scoped>
 .main-layout {
   display: grid;
-  grid: min-content auto / 700px auto;
+  grid: min-content auto / 1fr 700px 1fr;
   grid-template-areas:
-    "nav nav"
-    "main empty";
+    "nav nav nav"
+    "empty1 main empty2";
   min-height: 100vh;
-}
-
-.main-layout > .aside {
-  display: none;
 }
 
 .nav {
@@ -49,16 +62,40 @@ const MainLayoutStyles = computed(() => {
 }
 
 .aside {
-  grid-area: aside;
-  margin-top: var(--base-gap);
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-@media (min-width: 1100px) {
+.aside > * {
+  left: calc(50% - 200px);
+  top: var(--base-gap);
+  position: absolute;
+}
+
+@media (min-width: 1120px) {
   .main-layout {
-    grid: min-content auto / 700px 400px auto;
+    grid: min-content auto / 700px 420px auto;
     grid-template-areas:
       "nav nav nav"
       "main aside empty";
+  }
+
+  .aside {
+    grid-area: aside;
+    margin-top: var(--base-gap);
+    position: initial;
+    background-color: unset;
+  }
+
+  .aside > * {
+    left: unset;
   }
 
   .main-layout > .aside {
@@ -68,7 +105,7 @@ const MainLayoutStyles = computed(() => {
 
 @media (min-width: 1300px) {
   .main-layout {
-    grid: auto / auto 700px 400px;
+    grid: auto / auto 700px 420px;
     grid-template-areas: "nav main aside";
   }
   .aside {
@@ -76,7 +113,7 @@ const MainLayoutStyles = computed(() => {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1520px) {
   .main-layout {
     grid: auto / 1fr 700px 1fr;
     grid-template-areas: "nav main aside";

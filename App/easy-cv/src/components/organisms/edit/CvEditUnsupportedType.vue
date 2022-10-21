@@ -1,9 +1,9 @@
 <template>
-  <p class="edit-wrapper">Editace dané položky není podporována.</p>
+  <CvEditWrapper>
+    <p>Editace dané položky není podporována.</p>
+  </CvEditWrapper>
 </template>
 
-<style lang="css" scoped>
-.edit-wrapper {
-  padding: var(--base-gap);
-}
-</style>
+<script lang="ts" setup>
+import CvEditWrapper from "./CvEditWrapper.vue";
+</script>

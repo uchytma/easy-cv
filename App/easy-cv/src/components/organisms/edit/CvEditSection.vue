@@ -1,17 +1,15 @@
 <template>
-  <p class="edit-wrapper">{{ props.selectedItem.item.guid }}</p>
+  <CvEditWrapper>
+    <p>{{ props.selectedItem.item.guid }}</p>
+  </CvEditWrapper>
 </template>
 
 <script lang="ts" setup>
 import type { SelectedItem } from "@/stores/mainApp";
 
+import CvEditWrapper from "./CvEditWrapper.vue";
+
 const props = defineProps<{
   selectedItem: SelectedItem;
 }>();
 </script>
-
-<style lang="css" scoped>
-.edit-wrapper {
-  padding: var(--base-gap);
-}
-</style>
