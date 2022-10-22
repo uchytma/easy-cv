@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { HeaderSize } from "@/services/commonTypes/headerSize";
+import { HeaderSize } from "@/services/commonTypes/headerSize";
 import { computed } from "vue";
 const props = defineProps<{
   size: HeaderSize;
@@ -11,11 +11,11 @@ const props = defineProps<{
 
 const tag = computed(() => {
   switch (props.size) {
-    case "small":
+    case HeaderSize.Small:
       return "h3";
-    case "normal":
+    case HeaderSize.Normal:
       return "h2";
-    case "big":
+    case HeaderSize.Big:
       return "h1";
     default:
       return "h1";

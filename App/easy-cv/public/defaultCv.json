@@ -4,7 +4,7 @@
       "guid": "0009c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Matěj Uchytil",
-        "size": "big",
+        "size": "Big",
         "subtitle": "nar. ?.?.????",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
         "type": "header"
@@ -68,7 +68,7 @@
       "guid": "1119c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Vzdělání",
-        "size": "normal",
+        "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336caa",
         "type": "header"
       },
@@ -113,7 +113,7 @@
       "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Jazykové schopnosti",
-        "size": "normal",
+        "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336bbb",
         "type": "header"
       },
@@ -148,7 +148,7 @@
       "guid": "3339c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Pracovní zkušenosti",
-        "size": "normal",
+        "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336ccc",
         "type": "header"
       },
@@ -245,7 +245,7 @@
       "guid": "4449c9c6-6926-4de5-b9b1-43779c336c0c",
       "header": {
         "title": "Odborné znalosti a dovednosti",
-        "size": "normal",
+        "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336ddd",
         "type": "header"
       },
@@ -425,7 +425,7 @@
       "guid": "3339c9c6-6926-4de5-b9b1-43779c336cdd",
       "header": {
         "title": "Významné projekty",
-        "size": "normal",
+        "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336eee",
         "type": "header"
       },

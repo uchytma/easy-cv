@@ -19,6 +19,7 @@ import SelectList from "../../molecules/inputs/SelectList.vue";
 import BaseIcon from "../../atoms/BaseIcon.vue";
 
 import { useMainAppStore } from "@/stores/mainApp";
+import { HeaderSize, HeaderSizeLabels } from "@/services/commonTypes/headerSize";
 const store = useMainAppStore();
 
 const props = defineProps<{
@@ -32,9 +33,5 @@ function removeSection(): void {
 
 const section = computed(() => props.selectedItem.section);
 
-const sizeOptions = [
-  { value: "small", text: "Malá" },
-  { value: "normal", text: "Střední" },
-  { value: "big", text: "Velká" },
-];
+const sizeOptions = Object.keys(HeaderSize).map((key) => ({ value: key, text: HeaderSizeLabels.get(key) ?? "??" }));
 </script>
