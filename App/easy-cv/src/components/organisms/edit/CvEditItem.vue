@@ -11,6 +11,7 @@ import CvEditUnsupportedType from "./CvEditUnsupportedType.vue";
 import CvEditSection from "./CvEditSection.vue";
 import CvEditText from "./CvEditText.vue";
 import CvEditTextarea from "./CvEditTextarea.vue";
+import CvEditPanel from "./CvEditPanel.vue";
 
 const props = defineProps<{
   selectedItem: SelectedItem | null;
@@ -25,6 +26,8 @@ const editComponent = computed(() => {
         return CvEditText;
       case "textarea":
         return CvEditTextarea;
+      case "panel":
+        return CvEditPanel;
     }
   }
   return CvEditUnsupportedType;
