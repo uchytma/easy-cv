@@ -9,6 +9,7 @@ import type { SelectedItem } from "@/stores/mainApp";
 import { computed } from "vue";
 import CvEditUnsupportedType from "./CvEditUnsupportedType.vue";
 import CvEditSection from "./CvEditSection.vue";
+import CvEditText from "./CvEditText.vue";
 
 const props = defineProps<{
   selectedItem: SelectedItem | null;
@@ -19,6 +20,8 @@ const editComponent = computed(() => {
     switch (props.selectedItem.item.type) {
       case "header":
         return CvEditSection;
+      case "text":
+        return CvEditText;
     }
   }
   return CvEditUnsupportedType;

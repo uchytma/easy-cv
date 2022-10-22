@@ -7,3 +7,13 @@ export enum Icon {
   Close = "Close",
   Trash = "Trash",
 }
+
+export const IconLabels = new Map<string, string>([
+  [Icon.Phone, "Telefon"],
+  [Icon.Email, "Email"],
+  [Icon.Location, "Adresa"],
+  [Icon.Linkedin, "Linkedin"],
+  [Icon.Github, "Github"],
+  [Icon.Close, "Křížek"],
+  [Icon.Trash, "Popelnice"],
+]);

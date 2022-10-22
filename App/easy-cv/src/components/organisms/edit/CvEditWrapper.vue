@@ -1,6 +1,6 @@
 <template>
   <div class="edit-wrapper">
-    <ControlBar @on-close="store.selectedItem = null">
+    <ControlBar class="control-bar" @on-close="store.selectedItem = null">
       <slot name="controls"></slot>
     </ControlBar>
     <div class="items-wrapper">
@@ -22,17 +22,17 @@ const store = useMainAppStore();
   flex-direction: column;
 }
 
-.edit-wrapper:deep(> *) {
+.control-bar {
   padding: var(--base-gap);
-}
-
-.edit-wrapper:deep(> *:not(:last-child)) {
   border-bottom: 1px solid var(--color-lines);
 }
 
 .items-wrapper {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--base-gap) * 0.5);
+}
+
+.items-wrapper:deep(> *:not(:last-child)) {
+  border-bottom: 1px solid var(--color-lines);
 }
 </style>
