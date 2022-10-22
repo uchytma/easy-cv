@@ -1,5 +1,5 @@
 <template>
-  <article class="article cv-item-padding text-justify" v-html="props.item.text?.text"></article>
+  <article class="article cv-item-padding text-justify" v-html="props.item.text"></article>
 </template>
 
 <script lang="ts" setup>

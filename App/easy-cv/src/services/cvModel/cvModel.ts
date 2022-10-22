@@ -34,7 +34,7 @@ export type CvModelItemText = CvModelItem & {
 };
 
 export type CvModelItemTextarea = CvModelItem & {
-  text: TextFragment;
+  text: string;
   type: "textarea";
 };
 

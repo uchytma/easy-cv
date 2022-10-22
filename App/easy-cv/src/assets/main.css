@@ -97,17 +97,18 @@ p:not(:last-of-type) {
 }
 
 .input-wrapper > label {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--color-gray-4);
 }
 
 .input-wrapper > input,
-select {
+select, textarea, .tiptap-editor-content > * {
   border: none;
   border-bottom: 2px solid var(--color-gray-2);
   background-color: var(--color-gray-1);
-  padding: calc(var(--base-gap) * 0.5);
-  padding-bottom: calc(var(--base-gap) * 0.1);
+  padding: calc(var(--base-gap) * 0.6);
+  padding-bottom: calc(var(--base-gap) * 0.2);
+  font-size: 1rem;
 }
 
 .input-wrapper > select {
@@ -115,7 +116,7 @@ select {
 }
 
 .input-wrapper > select > * {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 a, a:visited {
