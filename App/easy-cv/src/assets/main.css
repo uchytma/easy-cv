@@ -66,16 +66,16 @@ h3 {
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 p:not(:last-of-type) {
-    margin-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 
 .hoverable:hover {
   cursor: pointer;
-  background-color: var(--color-gray-1) ;
+  background-color: var(--color-gray-1);
 }
 
 @media print {
@@ -94,4 +94,30 @@ p:not(:last-of-type) {
   .cv-item-padding {
     padding: calc(var(--base-gap) * 0.5);
   }
+}
+
+.input-wrapper > label {
+  font-size: 0.8rem;
+  color: var(--color-gray-4);
+}
+
+.input-wrapper > input,
+select {
+  border: none;
+  border-bottom: 2px solid var(--color-gray-2);
+  background-color: var(--color-gray-1);
+  padding: calc(var(--base-gap) * 0.5);
+  padding-bottom: calc(var(--base-gap) * 0.1);
+}
+
+.input-wrapper > select {
+  padding-left: calc(var(--base-gap) * 0.1);
+}
+
+.input-wrapper > select > * {
+  font-size: 0.9rem;
+}
+
+a, a:visited {
+  color: rgb(0, 0, 180);
 }

@@ -22,5 +22,9 @@ export const useMainAppStore = defineStore("mainApp", () => {
     return model;
   }
 
-  return { selectedBackground, cvModel, loadDefaultModel, selectedItem };
+  function removeSection(section: CvModelSection): void {
+    cvModel.value.sections = cvModel.value.sections.filter((s) => s !== section);
+  }
+
+  return { selectedBackground, cvModel, loadDefaultModel, selectedItem, removeSection };
 });

@@ -24,6 +24,8 @@ const iconClass = computed(() => {
       return "fa-brands fa-linkedin";
     case "close":
       return "fa-solid fa-xmark";
+    case "trash":
+      return "fa-solid fa-trash-can";
     default:
       return null;
   }
