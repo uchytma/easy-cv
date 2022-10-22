@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Icon } from "@/services/commonTypes/icons";
+import { Icon } from "@/services/commonTypes/icons";
 import { computed } from "vue";
 
 const props = defineProps<{
@@ -12,19 +12,19 @@ const props = defineProps<{
 
 const iconClass = computed(() => {
   switch (props.icon) {
-    case "phone":
+    case Icon.Phone:
       return "fa-solid fa-phone-square";
-    case "email":
+    case Icon.Email:
       return "fa-solid fa-mail-bulk";
-    case "location":
+    case Icon.Location:
       return "fa-solid fa-map-marked";
-    case "github":
+    case Icon.Github:
       return "fa-brands fa-github";
-    case "linkedin":
+    case Icon.Linkedin:
       return "fa-brands fa-linkedin";
-    case "close":
+    case Icon.Close:
       return "fa-solid fa-xmark";
-    case "trash":
+    case Icon.Trash:
       return "fa-solid fa-trash-can";
     default:
       return null;

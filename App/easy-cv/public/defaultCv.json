@@ -12,7 +12,7 @@
       "items": [
         {
           "guid": "a1e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "icon": "phone",
+          "icon": "Phone",
           "text": {
             "text": "+420 777 ??? ???",
             "linkUrl": "tel:+420777??????"
@@ -21,7 +21,7 @@
         },
         {
           "guid": "a2e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "icon": "email",
+          "icon": "Email",
           "text": {
             "text": "uchytma@gmail.com",
             "linkUrl": "mailto:uchytma@gmail.com"
@@ -30,7 +30,7 @@
         },
         {
           "guid": "a3e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "icon": "linkedin",
+          "icon": "Linkedin",
           "text": {
             "text": "linkedin.com/in/uchytma",
             "linkUrl": "https://www.linkedin.com/in/uchytma"
@@ -39,7 +39,7 @@
         },
         {
           "guid": "a4e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "icon": "github",
+          "icon": "Github",
           "text": {
             "text": "github.com/uchytma",
             "linkUrl": "https://github.com/uchytma"
@@ -48,7 +48,7 @@
         },
         {
           "guid": "a5e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "icon": "location",
+          "icon": "Location",
           "text": {
             "text": "Praha - 9, Českomoravská",
             "linkUrl": "https://www.google.com/maps/search/%C4%8Deskomoravsk%C3%A1/@50.1072772,14.4914009,16.6z"
