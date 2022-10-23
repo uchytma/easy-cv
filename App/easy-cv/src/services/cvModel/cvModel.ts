@@ -12,7 +12,12 @@ export type CvModelSection = {
   guid: string;
 };
 
-export type CvModelItemType = "text" | "textarea" | "panel" | "header";
+export enum CvModelItemType {
+  Text = "Text",
+  Textarea = "Textarea",
+  Panel = "Panel",
+  Header = "Header",
+}
 
 export type CvModelItem = {
   type: CvModelItemType;
@@ -23,19 +28,19 @@ export type CvModelSectionHeader = CvModelItem & {
   title: string;
   subtitle: string | null;
   size: HeaderSize;
-  type: "header";
+  type: CvModelItemType.Header;
 };
 
 export type CvModelItemText = CvModelItem & {
   icon: Icon | null;
   text: TextFragment | null;
   subtext: TextFragment | null;
-  type: "text";
+  type: CvModelItemType.Text;
 };
 
 export type CvModelItemTextarea = CvModelItem & {
   text: string;
-  type: "textarea";
+  type: CvModelItemType.Textarea;
 };
 
 export type CvModelItemPanel = CvModelItem & {
@@ -45,5 +50,5 @@ export type CvModelItemPanel = CvModelItem & {
   description: TextFragment | null;
   longText: TextFragment | null;
   rating: number | null;
-  type: "panel";
+  type: CvModelItemType.Panel;
 };

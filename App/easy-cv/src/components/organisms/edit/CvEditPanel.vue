@@ -83,6 +83,7 @@ watch(
 watch(ratingString, (newRating) => {
   item.value.rating = newRating ? parseInt(newRating) : null;
 });
+
 const ratingOptions = [
   { value: "1", text: "1" },
   { value: "2", text: "2" },

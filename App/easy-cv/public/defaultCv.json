@@ -7,7 +7,7 @@
         "size": "Big",
         "subtitle": "nar. ?.?.????",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
@@ -17,7 +17,7 @@
             "text": "+420 777 ??? ???",
             "linkUrl": "tel:+420777??????"
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "a2e9c9c6-6926-4de5-b9b1-43779c336caa",
@@ -26,7 +26,7 @@
             "text": "uchytma@gmail.com",
             "linkUrl": "mailto:uchytma@gmail.com"
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "a3e9c9c6-6926-4de5-b9b1-43779c336caa",
@@ -35,7 +35,7 @@
             "text": "linkedin.com/in/uchytma",
             "linkUrl": "https://www.linkedin.com/in/uchytma"
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "a4e9c9c6-6926-4de5-b9b1-43779c336caa",
@@ -44,7 +44,7 @@
             "text": "github.com/uchytma",
             "linkUrl": "https://github.com/uchytma"
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "a5e9c9c6-6926-4de5-b9b1-43779c336caa",
@@ -53,12 +53,12 @@
             "text": "Praha - 9, Českomoravská",
             "linkUrl": "https://www.google.com/maps/search/%C4%8Deskomoravsk%C3%A1/@50.1072772,14.4914009,16.6z"
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "a6e9c9c6-6926-4de5-b9b1-43779c336caa",
           "text":  "<p>Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zaměřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>",
-          "type": "textarea"
+          "type": "Textarea"
         }
       ]
     },
@@ -68,12 +68,12 @@
         "title": "Vzdělání",
         "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336caa",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "ČVUT - Fakulta informačních technologí",
             "bold": true
@@ -90,7 +90,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Střední průmyslová škola elektrotechnická",
             "bold": true
@@ -113,7 +113,7 @@
         "title": "Jazykové schopnosti",
         "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336bbb",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
@@ -126,7 +126,7 @@
             "text": "Rodilý mluvčí",
             "muted": true
           },
-          "type": "text"
+          "type": "Text"
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c33bbbb",
@@ -138,7 +138,7 @@
             "text": "B2, pasivní znalost",
             "muted": true
           },
-          "type": "text"
+          "type": "Text"
         }
       ]
     },
@@ -148,12 +148,12 @@
         "title": "Pracovní zkušenosti",
         "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336ccc",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Mid/Senior Software developer & IT Architect",
             "bold": true
@@ -170,7 +170,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Lead Software Developer",
             "bold": true
@@ -187,7 +187,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Software developer",
             "bold": true
@@ -204,7 +204,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Software developer",
             "bold": true
@@ -221,7 +221,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Software developer",
             "bold": true
@@ -245,12 +245,12 @@
         "title": "Odborné znalosti a dovednosti",
         "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336ddd",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
-          "type": "panel",
+          "type": "Panel",
           "rating": 5,
           "title": {
             "text": ".NET",
@@ -263,7 +263,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
-          "type": "panel",
+          "type": "Panel",
           "rating": 4,
           "title": {
             "text": "Vue.js 2/3",
@@ -276,7 +276,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
-          "type": "panel",
+          "type": "Panel",
           "rating": 4,
           "title": {
             "text": "HTML 5 / CSS 3 / preprocessors / webpack / npm / vite",
@@ -289,7 +289,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Blazor",
@@ -302,7 +302,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336eee",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Databáze / MS SQL / MySQL / MongoDB",
@@ -315,7 +315,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336fff",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Azure infrastructure",
@@ -328,7 +328,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336011",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Git / GitHub / Azure DevOps",
@@ -341,7 +341,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336022",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Testování / Cypress / Selenium / Unit testing / Manuální testing",
@@ -354,7 +354,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336033",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "IT Analýza / architektura",
@@ -367,7 +367,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336044",
-          "type": "panel",
+          "type": "Panel",
           "rating": 3,
           "title": {
             "text": "Task management / Asana / Code review / tvorba zadání",
@@ -380,7 +380,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336055",
-          "type": "panel",
+          "type": "Panel",
           "rating": 2,
           "title": {
             "text": "Typescript",
@@ -393,7 +393,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336066",
-          "type": "panel",
+          "type": "Panel",
           "rating": 2,
           "title": {
             "text": "Prototypování / Adobe XD",
@@ -406,7 +406,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336077",
-          "type": "panel",
+          "type": "Panel",
           "rating": 1,
           "title": {
             "text": "Go",
@@ -425,12 +425,12 @@
         "title": "Významné projekty",
         "size": "Normal",
         "guid": "2229c9c6-6926-4de5-b9b1-43779c336eee",
-        "type": "header"
+        "type": "Header"
       },
       "items": [
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "DORIS",
             "bold": true
@@ -449,7 +449,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "In Kalkulačka",
             "bold": true
@@ -466,7 +466,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "tianDe",
             "bold": true
@@ -483,7 +483,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Hypoteční Kalkulačka",
             "bold": true
@@ -500,7 +500,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Adresář",
             "bold": true
@@ -516,7 +516,7 @@
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336eee",
-          "type": "panel",
+          "type": "Panel",
           "title": {
             "text": "Adéla / In Portál - CRM portál",
             "bold": true

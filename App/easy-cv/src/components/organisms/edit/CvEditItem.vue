@@ -12,7 +12,7 @@ import CvEditSection from "./CvEditSection.vue";
 import CvEditText from "./CvEditText.vue";
 import CvEditTextarea from "./CvEditTextarea.vue";
 import CvEditPanel from "./CvEditPanel.vue";
-
+import { CvModelItemType } from "@/services/cvModel/cvModel";
 const props = defineProps<{
   selectedItem: SelectedItem | null;
 }>();
@@ -20,13 +20,13 @@ const props = defineProps<{
 const editComponent = computed(() => {
   if (props.selectedItem) {
     switch (props.selectedItem.item.type) {
-      case "header":
+      case CvModelItemType.Header:
         return CvEditSection;
-      case "text":
+      case CvModelItemType.Text:
         return CvEditText;
-      case "textarea":
+      case CvModelItemType.Textarea:
         return CvEditTextarea;
-      case "panel":
+      case CvModelItemType.Panel:
         return CvEditPanel;
     }
   }
