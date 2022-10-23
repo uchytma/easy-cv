@@ -18,7 +18,7 @@ export type Background = {
 };
 
 const supportedBackgrounds: Background[] = [
-  { id: 1, imgSrcUrl: null, name: "Empty" },
+  { id: 1, imgSrcUrl: null, name: "Bez pozadí" },
   { id: 2, imgSrcUrl: dotsImageUrl, name: "Puntíky" },
 ];
 
