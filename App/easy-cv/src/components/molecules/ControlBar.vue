@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div><slot></slot></div>
+    <div class="slot-wrapper"><slot></slot></div>
     <div>
       <a href="javascript:void(0)" @click="emits('onClose')">
         <BaseIcon :icon="Icon.Close"></BaseIcon>
@@ -23,5 +23,10 @@ const emits = defineEmits<{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.slot-wrapper {
+  display: flex;
+  gap: calc(var(--base-gap) * 0.5);
 }
 </style>

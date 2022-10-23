@@ -18,7 +18,11 @@ import { useMainAppStore } from "@/stores/mainApp";
 const store = useMainAppStore();
 
 function onItemSelected(event: EventItemSelected, section: CvModelSection): void {
-  store.selectedItem = { item: event.item, callerPosition: event.callerPosition, section: section };
+  store.selectedItem = {
+    item: event.item,
+    section: section,
+    htmlElement: event.htmlElement,
+  };
 }
 </script>
 

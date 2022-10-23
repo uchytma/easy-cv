@@ -7,6 +7,8 @@
     </CvEditGroup>
     <template #controls>
       <a @click="removeSection" href="javascript:void(0)"><BaseIcon :icon="Icon.Trash" /></a>
+      <a @click="moveUp" href="javascript:void(0)"><BaseIcon :icon="Icon.Up" /></a>
+      <a @click="moveDown" href="javascript:void(0)"><BaseIcon :icon="Icon.Down" /></a>
     </template>
   </CvEditWrapper>
 </template>
@@ -31,8 +33,16 @@ const props = defineProps<{
 }>();
 
 function removeSection(): void {
-  store.removeSection(props.selectedItem.section);
+  store.sectionRemove(props.selectedItem.section);
   store.selectedItem = null;
+}
+
+function moveUp(): void {
+  store.sectionMoveUp(props.selectedItem.section);
+}
+
+function moveDown(): void {
+  store.sectionMoveDown(props.selectedItem.section);
 }
 
 const section = computed(() => props.selectedItem.section);

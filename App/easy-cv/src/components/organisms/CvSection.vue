@@ -21,7 +21,6 @@
 import type { CvModelItem, CvModelSection } from "@/services/cvModel/cvModel";
 import CvSectionHeader from "../molecules/CvSectionHeader.vue";
 import CvItem from "../molecules/CvItem.vue";
-import { getAbsolutePosition } from "@/services/domUtils/domUtils";
 import type { EventItemSelected } from "@/services/domUtils/eventItemSelected";
 const props = defineProps<{
   section: CvModelSection;
@@ -35,7 +34,7 @@ function headerClick(item: CvModelItem, event: Event): void {
   const target = event.currentTarget as HTMLElement;
   emits("onItemSelected", {
     item: item,
-    callerPosition: getAbsolutePosition(target, window),
+    htmlElement: target,
   });
 }
 </script>

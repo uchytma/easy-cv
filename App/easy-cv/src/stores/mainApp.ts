@@ -1,20 +1,20 @@
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 import { defineStore } from "pinia";
 import { getBackgrounds } from "@/services/background/backgroundService";
 import { getDefaultCv } from "@/services/cvModel/cvModelService";
 import type { CvModel, CvModelItem, CvModelSection } from "@/services/cvModel/cvModel";
-import type { Position } from "@/services/domUtils/position";
 
 export type SelectedItem = {
-  callerPosition: Position;
   item: CvModelItem;
   section: CvModelSection;
+  htmlElement: HTMLElement;
 };
 
 export const useMainAppStore = defineStore("mainApp", () => {
   const cvModel = ref<CvModel>({ sections: [] });
   const selectedBackground = ref(getBackgrounds()[0]);
   const selectedItem = ref<SelectedItem | null>(null);
+  const refreshKeyAsidePosition = ref(0);
 
   async function loadDefaultModel(): Promise<CvModel> {
     const model = await getDefaultCv();
@@ -22,7 +22,7 @@ export const useMainAppStore = defineStore("mainApp", () => {
     return model;
   }
 
-  function removeSection(section: CvModelSection): void {
+  function sectionRemove(section: CvModelSection): void {
     cvModel.value.sections = cvModel.value.sections.filter((s) => s !== section);
   }
 
@@ -30,5 +30,40 @@ export const useMainAppStore = defineStore("mainApp", () => {
     section.items = section.items.filter((i) => i !== item);
   }
 
-  return { selectedBackground, cvModel, loadDefaultModel, selectedItem, removeSection, removeItem };
+  function sectionMoveUp(section: CvModelSection): void {
+    const index = cvModel.value.sections.indexOf(section);
+    if (index > 0) {
+      swapItems(cvModel.value.sections, index, index - 1);
+      nextTick(() => {
+        refreshKeyAsidePosition.value++;
+      });
+    }
+  }
+
+  function sectionMoveDown(section: CvModelSection): void {
+    const index = cvModel.value.sections.indexOf(section);
+    if (index < cvModel.value.sections.length - 1) {
+      swapItems(cvModel.value.sections, index, index + 1);
+      nextTick(() => {
+        refreshKeyAsidePosition.value++;
+      });
+    }
+  }
+
+  function swapItems<T>(array: Array<T>, index1: number, index2: number): Array<T> {
+    array.splice(index2, 0, array.splice(index1, 1)[0]);
+    return array;
+  }
+
+  return {
+    selectedBackground,
+    cvModel,
+    loadDefaultModel,
+    selectedItem,
+    sectionRemove,
+    removeItem,
+    sectionMoveUp,
+    sectionMoveDown,
+    refreshKeyAsidePosition,
+  };
 });
