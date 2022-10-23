@@ -16,6 +16,11 @@ export const useMainAppStore = defineStore("mainApp", () => {
   const selectedItem = ref<SelectedItem | null>(null);
   const refreshKeyAsidePosition = ref(0);
 
+  /** Increment value to force recompute aside box position.
+   * It is used when section or item is moved
+   */
+  const refreshKeyAsidePosition = ref(0);
+
   async function loadDefaultModel(): Promise<CvModel> {
     const model = await getDefaultCv();
     cvModel.value = model;
