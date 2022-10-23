@@ -14,7 +14,7 @@ import type { SelectedItem } from "@/stores/mainApp";
 import { computed } from "vue";
 import CvEditWrapper from "./CvEditWrapper.vue";
 import BaseIcon from "../../atoms/BaseIcon.vue";
-import { Icon, IconLabels } from "@/services/commonTypes/icons";
+import { Icon } from "@/services/commonTypes/icons";
 import { useMainAppStore } from "@/stores/mainApp";
 import type { CvModelItemTextarea } from "@/services/cvModel/cvModel";
 import CvEditGroup from "./CvEditGroup.vue";

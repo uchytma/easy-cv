@@ -9,3 +9,8 @@ export const HeaderSizeLabels = new Map<string, string>([
   [HeaderSize.Normal, "Normální"],
   [HeaderSize.Small, "Malá"],
 ]);
+
+export const sizeOptions = Object.keys(HeaderSize).map((key) => ({
+  value: key,
+  text: HeaderSizeLabels.get(key) ?? "??",
+}));

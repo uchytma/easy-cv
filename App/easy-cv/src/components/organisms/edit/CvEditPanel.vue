@@ -4,7 +4,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit text"
         @removeTextFragment="item.title = null"
-        @createTextFragment="item.title = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.title = getDefaultTextFragment()"
         id="fragment_text"
         :textFragment="item.title"
       ></CvEditTextFragment>
@@ -14,7 +14,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit popisek"
         @removeTextFragment="item.description = null"
-        @createTextFragment="item.description = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.description = getDefaultTextFragment()"
         id="fragment_description"
         :textFragment="item.description"
       ></CvEditTextFragment>
@@ -23,7 +23,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit doplňkový text"
         @removeTextFragment="item.subtitle = null"
-        @createTextFragment="item.subtitle = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.subtitle = getDefaultTextFragment()"
         id="fragment_subtitle"
         :textFragment="item.subtitle"
       ></CvEditTextFragment>
@@ -32,7 +32,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit dlouhý text"
         @removeTextFragment="item.longText = null"
-        @createTextFragment="item.longText = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.longText = getDefaultTextFragment()"
         id="fragment_longText"
         :textFragment="item.longText"
       ></CvEditTextFragment>
@@ -51,11 +51,12 @@ import { computed, ref, watch } from "vue";
 import CvEditWrapper from "./CvEditWrapper.vue";
 import NullableSelectList from "../../molecules/inputs/NullableSelectList.vue";
 import BaseIcon from "../../atoms/BaseIcon.vue";
-import { Icon, IconLabels } from "@/services/commonTypes/icons";
+import { Icon } from "@/services/commonTypes/icons";
 import { useMainAppStore } from "@/stores/mainApp";
-import type { CvModelItemPanel, CvModelItemText } from "@/services/cvModel/cvModel";
+import type { CvModelItemPanel } from "@/services/cvModel/cvModel";
 import CvEditGroup from "./CvEditGroup.vue";
 import NullableTextInput from "../../molecules/inputs/NullableTextInput.vue";
+import { getDefaultTextFragment } from "@/services/commonTypes/textFragment";
 
 import CvEditTextFragment from "./CvEditTextFragment.vue";
 const store = useMainAppStore();

@@ -20,7 +20,7 @@ import NullableTextInput from "../../molecules/inputs/NullableTextInput.vue";
 import SelectList from "../../molecules/inputs/SelectList.vue";
 import BaseIcon from "../../atoms/BaseIcon.vue";
 import { Icon } from "@/services/commonTypes/icons";
-import { HeaderSize, HeaderSizeLabels } from "@/services/commonTypes/headerSize";
+import { sizeOptions } from "@/services/commonTypes/headerSize";
 import CvEditGroup from "./CvEditGroup.vue";
 
 import { useMainAppStore } from "@/stores/mainApp";
@@ -36,6 +36,4 @@ function removeSection(): void {
 }
 
 const section = computed(() => props.selectedItem.section);
-
-const sizeOptions = Object.keys(HeaderSize).map((key) => ({ value: key, text: HeaderSizeLabels.get(key) ?? "??" }));
 </script>

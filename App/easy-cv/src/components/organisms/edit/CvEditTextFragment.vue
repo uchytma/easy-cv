@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import type { TextFragment } from "@/services/commonTypes/textFragment";
 import CheckboxInput from "../../molecules/inputs/CheckboxInput.vue";
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import TextInput from "../../molecules/inputs/TextInput.vue";
 import NullableTextInput from "../../molecules/inputs/NullableTextInput.vue";
 

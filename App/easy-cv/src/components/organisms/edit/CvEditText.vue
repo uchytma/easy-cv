@@ -4,7 +4,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit text"
         @removeTextFragment="item.text = null"
-        @createTextFragment="item.text = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.text = getDefaultTextFragment()"
         id="fragment_text"
         :textFragment="item.text"
       ></CvEditTextFragment>
@@ -13,7 +13,7 @@
       <CvEditTextFragment
         checkboxLabel="Zobrazit doplňkový text"
         @removeTextFragment="item.subtext = null"
-        @createTextFragment="item.subtext = { text: '', linkUrl: null, bold: false, muted: false }"
+        @createTextFragment="item.subtext = getDefaultTextFragment()"
         id="fragment_subtext"
         :textFragment="item.subtext"
       ></CvEditTextFragment>
@@ -32,11 +32,13 @@ import { computed } from "vue";
 import CvEditWrapper from "./CvEditWrapper.vue";
 import NullableSelectList from "../../molecules/inputs/NullableSelectList.vue";
 import BaseIcon from "../../atoms/BaseIcon.vue";
-import { Icon, IconLabels } from "@/services/commonTypes/icons";
+import { Icon, iconOptions } from "@/services/commonTypes/icons";
 import { useMainAppStore } from "@/stores/mainApp";
 import type { CvModelItemText } from "@/services/cvModel/cvModel";
 import CvEditGroup from "./CvEditGroup.vue";
 import CvEditTextFragment from "./CvEditTextFragment.vue";
+import { getDefaultTextFragment } from "@/services/commonTypes/textFragment";
+
 const store = useMainAppStore();
 
 const props = defineProps<{
@@ -49,6 +51,4 @@ function removeItem(): void {
   store.removeItem(props.selectedItem.section, item.value);
   store.selectedItem = null;
 }
-
-const iconOptions = Object.keys(Icon).map((key) => ({ value: key, text: IconLabels.get(key) ?? "??" }));
 </script>

@@ -17,3 +17,5 @@ export const IconLabels = new Map<string, string>([
   [Icon.Close, "Křížek"],
   [Icon.Trash, "Popelnice"],
 ]);
+
+export const iconOptions = Object.keys(Icon).map((key) => ({ value: key, text: IconLabels.get(key) ?? "??" }));
