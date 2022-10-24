@@ -309,7 +309,7 @@
             "bold": true
           },
           "subtitle": {
-            "text": "Mám zkušenosti předevšim s relačními databázemi (a to zejména z pohledu Entity Frameworku), nicméně setkal jsem se i s No-SQL databázemi MongoDB a Elastic search.",
+            "text": "Mám zkušenosti především s relačními databázemi (a to zejména z pohledu Entity Frameworku), nicméně setkal jsem se i s No-SQL databázemi MongoDB a Elastic search.",
             "muted": true
           }
         },
