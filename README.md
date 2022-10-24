@@ -1,6 +1,8 @@
 # easy-cv
 Create your professional looking and printable CV in minutes.
 
+**DEMO: https://easycv.azurewebsites.net**
+
 ## How to run (dev)
 
 Backend (API) part is .net 6 application. It could be run from Visual Studio IDE or with `dotnet run` command.
