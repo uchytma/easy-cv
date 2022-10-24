@@ -24,3 +24,8 @@ Application is running at root url: `/`
 GraphQL API: `/graphql`
 
 GraphQL UI: `/graphql/ui`
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/28567403/197527180-c10ab4c9-b365-4c52-9d65-f86f9cc517e5.png)
+
