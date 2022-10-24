@@ -57,7 +57,7 @@
         },
         {
           "guid": "a6e9c9c6-6926-4de5-b9b1-43779c336caa",
-          "text":  "<p>Jsem FullStack vývojář, v současnosti s preferencí vývoje na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zaměřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>",
+          "text":  "<p>Jsem FullStack vývojář, v současnosti pracuji převážně na platformě .NET. Zabývám se také analýzou a specifikací požadavků (tvorbu implementačních zadání na základě business požadavků), návrhem architektury a vhodných řešení.  </p><p>        Programování zůstává nadále mým hlavním zaměřením a snažím se v něm neustále zdokonalovat. Obecně sleduji trendy v oblasti IT, a to nejen ve spojení s .NET a Microsoft technologiemi. Navštěvuji přednášky skupiny WUG či IT konference, jako například WUG Days či WeAreDevelopers World Congress.   </p><p>    Vlastním řidičský průkaz skupiny B.    </p><p>      Rád cestuji a díky dobře zvolenému oboru se snažím využívat možností práce na dálku ze zahraničí.</p>",
           "type": "Textarea"
         }
       ]
@@ -155,7 +155,7 @@
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
           "type": "Panel",
           "title": {
-            "text": "Mid/Senior Software developer & IT Architect",
+            "text": "Mid/Senior Software developer",
             "bold": true
           },
           "description": {
@@ -251,7 +251,7 @@
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
           "type": "Panel",
-          "rating": 5,
+          "rating": 4,
           "title": {
             "text": ".NET",
             "bold": true
@@ -264,26 +264,26 @@
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
           "type": "Panel",
-          "rating": 4,
+          "rating": 3,
           "title": {
             "text": "Vue.js 2/3",
             "bold": true
           },
           "subtitle": {
-            "text": "FE Framework pro tvorbu single page aplikací. Zkušenosti s Vuex store, BootstrapVue, vee-validate a dalšími knihovnami.",
+            "text": "Zkušenosti s Vuex store, BootstrapVue, vee-validate a dalšími knihovnami.",
             "muted": true
           }
         },
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
           "type": "Panel",
-          "rating": 4,
+          "rating": 3,
           "title": {
-            "text": "HTML 5 / CSS 3 / preprocessors / webpack / npm / vite",
+            "text": "HTML 5 / CSS 3 / preprocessors / webpack / npm / vite / docker",
             "bold": true
           },
           "subtitle": {
-            "text": "Jako pro každého fullstack vývojáře je i pro mne nezbytností znalost této skupiny technologií potřebných pro webový vývoj.",
+            "text": "V praxi jsem se setkal s uvedenými technologiemi potřebnýcmi pro web development.",
             "muted": true
           }
         },
@@ -352,19 +352,7 @@
             "muted": true
           }
         },
-        {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336033",
-          "type": "Panel",
-          "rating": 3,
-          "title": {
-            "text": "IT Analýza / architektura",
-            "bold": true
-          },
-          "subtitle": {
-            "text": "Spolupracoval jsem na definici architektury nově vznikajících i stávajících aplikací. Prováděl jsem IT a částečně i business analýzu požadavků. V rámci své práce jsem získal znalosti zejména v doméně pojišťovnictví, financí a investic.",
-            "muted": true
-          }
-        },
+        
         {
           "guid": "31e9c9c6-6926-4de5-b9b1-43779c336044",
           "type": "Panel",
@@ -379,15 +367,15 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336055",
+          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336033",
           "type": "Panel",
           "rating": 2,
           "title": {
-            "text": "Typescript",
+            "text": "IT Analýza / architektura",
             "bold": true
           },
           "subtitle": {
-            "text": "Teprve nedávno jsem (spolu s Vue3) přišel do vývoje pomocí TypeScriptu. Mohu tak využít své předchozí zkušenosti se silně typovými jazyky.",
+            "text": "Spolupracoval jsem na definici architektury nově vznikajících i stávajících aplikací. Prováděl jsem IT a částečně i business analýzu požadavků. V rámci své práce jsem získal znalosti zejména v doméně pojišťovnictví, financí a investic.",
             "muted": true
           }
         },
@@ -401,6 +389,19 @@
           },
           "subtitle": {
             "text": "Prototypování a návrh Wireframes/UX/UI webových aplikací v Adobe XD.",
+            "muted": true
+          }
+        },
+        {
+          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336055",
+          "type": "Panel",
+          "rating": 1,
+          "title": {
+            "text": "Typescript",
+            "bold": true
+          },
+          "subtitle": {
+            "text": "Teprve nedávno jsem (spolu s Vue3) přišel do vývoje pomocí TypeScriptu. Mohu tak využít své předchozí zkušenosti se silně typovými jazyky.",
             "muted": true
           }
         },
