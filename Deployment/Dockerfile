@@ -26,7 +26,7 @@ ENV ASPNETCORE_URLS=http://*:5000
 ENV ASPNETCORE_ENVIRONMENT="production"
 WORKDIR /app
 COPY --from=build-env /app/out .
-COPY --from=build-spa-vue /app/dist ./wwwroot/app
+COPY --from=build-spa-vue /app/dist ./wwwroot
 EXPOSE 5000
 ENTRYPOINT ["dotnet", "EasyCv.Api.dll"]
 

@@ -1,9 +1,4 @@
-using EasyCv.Api.Extensions;
 using GraphQL;
-using GraphQL.Server;
-using GraphQL.Server.Ui.GraphiQL;
-using GraphQL.Types;
-using Microsoft.Extensions.FileProviders;
 
 namespace EasyCv
 {
@@ -31,7 +26,8 @@ namespace EasyCv
                 app.UseHsts();
             }
 
-            app.ServeSpaFiles();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -39,6 +35,7 @@ namespace EasyCv
             {
                 endpoints.MapGraphQL("graphql");
                 endpoints.MapGraphQLGraphiQL("graphql/ui");
+                endpoints.MapFallbackToFile("./index.html", new StaticFileOptions());
             });
 
             app.Run();
