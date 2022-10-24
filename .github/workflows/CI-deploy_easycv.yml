@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: compsolutions.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a2d16418cacc42979b1828b16b7639c4 }}/easy-cv:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./Deployment/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
