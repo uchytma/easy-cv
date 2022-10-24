@@ -31,10 +31,8 @@ namespace EasyCv
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-
             app.ServeSpaFiles();
-            
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
