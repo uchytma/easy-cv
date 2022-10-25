@@ -1,10 +1,7 @@
 <template>
   <section class="section-wrapper">
     <div class="header-and-first-item-wrapper">
-      <CvSectionHeader
-        @click="headerClick(props.section.header, $event)"
-        :sectionHeader="props.section.header"
-      ></CvSectionHeader>
+      <CvItem @click="headerClick(props.section.header, $event)" :item="props.section.header" />
       <CvItem
         @click="headerClick(props.section.items[0], $event)"
         v-if="props.section.items.length > 0"
@@ -19,7 +16,6 @@
 
 <script lang="ts" setup>
 import type { CvModelItem, CvModelSection } from "@/services/cvModel/cvModel";
-import CvSectionHeader from "../molecules/CvSectionHeader.vue";
 import CvItem from "../molecules/CvItem.vue";
 import type { EventItemSelected } from "@/services/domUtils/eventItemSelected";
 const props = defineProps<{
