@@ -1,5 +1,5 @@
 <template>
-  <div class="item-wrapper hoverable">
+  <div :class="{ selected: selected }" class="item-wrapper hoverable">
     <CvItemText v-if="props.item.type === CvModelItemType.Text" :item="(props.item as CvModelItemText)"></CvItemText>
     <CvItemTextarea
       v-if="props.item.type === CvModelItemType.Textarea"
@@ -33,5 +33,6 @@ import CvItemSectionHeader from "./CvItemSectionHeader.vue";
 
 const props = defineProps<{
   item: CvModelItem;
+  selected: boolean;
 }>();
 </script>

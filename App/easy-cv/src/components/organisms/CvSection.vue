@@ -1,15 +1,26 @@
 <template>
   <section class="section-wrapper">
     <div class="header-and-first-item-wrapper">
-      <CvItem @click="headerClick(props.section.header, $event)" :item="props.section.header" />
       <CvItem
+        :selected="actualSelectedItem === props.section.header"
+        @click="headerClick(props.section.header, $event)"
+        :item="props.section.header"
+      />
+      <CvItem
+        :selected="actualSelectedItem === props.section.items[0]"
         @click="headerClick(props.section.items[0], $event)"
         v-if="props.section.items.length > 0"
         :item="props.section.items[0]"
       />
     </div>
     <template v-for="(item, index) in props.section.items" :key="item.guid">
-      <CvItem @click="headerClick(item, $event)" class="item-wrapper" v-if="index != 0" :item="item" />
+      <CvItem
+        :selected="actualSelectedItem === item"
+        @click="headerClick(item, $event)"
+        class="item-wrapper"
+        v-if="index != 0"
+        :item="item"
+      />
     </template>
   </section>
 </template>
@@ -20,6 +31,7 @@ import CvItem from "../molecules/CvItem.vue";
 import type { EventItemSelected } from "@/services/domUtils/eventItemSelected";
 const props = defineProps<{
   section: CvModelSection;
+  actualSelectedItem: CvModelItem | null;
 }>();
 
 const emits = defineEmits<{

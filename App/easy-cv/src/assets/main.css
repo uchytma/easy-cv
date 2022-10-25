@@ -78,6 +78,10 @@ p:not(:last-of-type) {
   background-color: var(--color-gray-1);
 }
 
+.selected {
+  background-color: var(--color-gray-1);
+}
+
 @media print {
   html {
     background-color: white;

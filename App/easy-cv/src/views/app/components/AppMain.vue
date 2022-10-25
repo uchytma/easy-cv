@@ -5,6 +5,7 @@
       v-for="section in store.cvModel.sections"
       :key="section.guid"
       :section="section"
+      :actualSelectedItem="store.selectedItem?.item ?? null"
     ></CvSection>
   </div>
 </template>
