@@ -37,7 +37,7 @@ const computedStyle = computed<CSSProperties>(() => {
 <style lang="css" scoped>
 .main-layout {
   display: grid;
-  grid: min-content auto / 1fr 700px 1fr;
+  grid: min-content auto / 1fr minmax(auto, 700px) 1fr;
   grid-template-areas:
     "nav nav nav"
     "empty1 main empty2";
