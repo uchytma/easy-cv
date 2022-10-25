@@ -1,12 +1,12 @@
 {
   "sections": [
     {
-      "guid": "0009c9c6-6926-4de5-b9b1-43779c336c0c",
+      "guid": "6d9f662c-e04d-46fe-8c0c-f3df4b763c11",
       "header": {
         "title": "Matěj Uchytil",
         "size": "Big",
         "subtitle": "nar. ?.?.????",
-        "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
+        "guid": "4fa60348-7535-48f4-9e4b-98f2602dbdc9",
         "type": "Header"
       },
       "items": [
@@ -20,7 +20,7 @@
           "type": "Text"
         },
         {
-          "guid": "a2e9c9c6-6926-4de5-b9b1-43779c336caa",
+          "guid": "27d760f3-705c-4881-9ba7-0c2ea4683880",
           "icon": "Email",
           "text": {
             "text": "uchytma@gmail.com",
@@ -29,7 +29,7 @@
           "type": "Text"
         },
         {
-          "guid": "a3e9c9c6-6926-4de5-b9b1-43779c336caa",
+          "guid": "bf1d553d-f067-450a-af83-101850ca622b",
           "icon": "Linkedin",
           "text": {
             "text": "linkedin.com/in/uchytma",
@@ -38,7 +38,7 @@
           "type": "Text"
         },
         {
-          "guid": "a4e9c9c6-6926-4de5-b9b1-43779c336caa",
+          "guid": "ad1bc69d-c368-45f4-a8dc-1b78680fcab2",
           "icon": "Github",
           "text": {
             "text": "github.com/uchytma",
@@ -47,7 +47,7 @@
           "type": "Text"
         },
         {
-          "guid": "a5e9c9c6-6926-4de5-b9b1-43779c336caa",
+          "guid": "e04df77f-68db-4158-9e5b-55575ddbde5a",
           "icon": "Location",
           "text": {
             "text": "Praha - 9, Českomoravská",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "guid": "1119c9c6-6926-4de5-b9b1-43779c336c0c",
+      "guid": "792d94e4-04e1-4155-92c9-aec6a567a3c1",
       "header": {
         "title": "Vzdělání",
         "size": "Normal",
@@ -72,7 +72,7 @@
       },
       "items": [
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
+          "guid": "9ae2c935-c7ee-4846-b06f-d02ae614e11d",
           "type": "Panel",
           "title": {
             "text": "ČVUT - Fakulta informačních technologí",
@@ -89,7 +89,7 @@
           "imageUrl": "/imgs/cvut.png"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
+          "guid": "03092a4f-c327-4fd8-a3d4-8f1253a394e2",
           "type": "Panel",
           "title": {
             "text": "Střední průmyslová škola elektrotechnická",
@@ -108,16 +108,16 @@
       ]
     },
     {
-      "guid": "2229c9c6-6926-4de5-b9b1-43779c336c0c",
+      "guid": "c7a103dc-872a-4a0e-8da4-48a3e977a30a",
       "header": {
         "title": "Jazykové schopnosti",
         "size": "Normal",
-        "guid": "2229c9c6-6926-4de5-b9b1-43779c336bbb",
+        "guid": "972f1b98-ec42-4d9b-b6c3-912b14d8aca6",
         "type": "Header"
       },
       "items": [
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c33aaaa",
+          "guid": "0f52b343-f9c3-44c1-b533-3c1a1e85e9e9",
           "text": {
             "text": "Český jazyk",
             "bold": true
@@ -129,7 +129,7 @@
           "type": "Text"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c33bbbb",
+          "guid": "cd8cd670-e5c1-4cab-8698-9ae6888f40ad",
           "text": {
             "text": "Anglický jazyk",
             "bold": true
@@ -143,16 +143,16 @@
       ]
     },
     {
-      "guid": "3339c9c6-6926-4de5-b9b1-43779c336c0c",
+      "guid": "83a4ca28-680d-4496-bf39-9ed76b2eba00",
       "header": {
         "title": "Pracovní zkušenosti",
         "size": "Normal",
-        "guid": "2229c9c6-6926-4de5-b9b1-43779c336ccc",
+        "guid": "dcd3cb85-8fe8-4f37-a67c-64089e2819d4",
         "type": "Header"
       },
       "items": [
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
+          "guid": "344a69ea-337a-49ec-97f7-ff8099243729",
           "type": "Panel",
           "title": {
             "text": "Mid/Senior Software developer",
@@ -169,7 +169,7 @@
           "imageUrl": "/imgs/ifas.svg"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
+          "guid": "72ccceca-9aaa-453e-ac2c-220a9babad63",
           "type": "Panel",
           "title": {
             "text": "Lead Software Developer",
@@ -186,7 +186,7 @@
           "imageUrl": "/imgs/atama.jfif"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
+          "guid": "6b823cfb-15b5-439d-88af-0ca2ae9cb4e3",
           "type": "Panel",
           "title": {
             "text": "Software developer",
@@ -203,7 +203,7 @@
           "imageUrl": "/imgs/inin.jpg"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
+          "guid": "b45b7203-8593-40cc-bd1f-445bc765b65a",
           "type": "Panel",
           "title": {
             "text": "Software developer",
@@ -220,7 +220,7 @@
           "imageUrl": "/imgs/valfin.png"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
+          "guid": "20511660-9ef5-4c18-9215-2f1cecabc20c",
           "type": "Panel",
           "title": {
             "text": "Software developer",
@@ -240,16 +240,16 @@
     },
 
     {
-      "guid": "4449c9c6-6926-4de5-b9b1-43779c336c0c",
+      "guid": "b28af4d6-dd47-4b39-af6a-364388d8d70a",
       "header": {
         "title": "Odborné znalosti a dovednosti",
         "size": "Normal",
-        "guid": "2229c9c6-6926-4de5-b9b1-43779c336ddd",
+        "guid": "22a2cd26-9853-4c09-a7d1-44e002b54460",
         "type": "Header"
       },
       "items": [
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
+          "guid": "9b4b4447-3ebe-4b40-9671-f43dbfde1e92",
           "type": "Panel",
           "rating": 4,
           "title": {
@@ -262,7 +262,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
+          "guid": "22aab05b-8507-4995-8353-9e6131c65a9b",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -275,7 +275,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
+          "guid": "b16d21f1-7887-49dd-be81-441291e0cc68",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -288,7 +288,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
+          "guid": "89c0ffd4-0d37-4292-a6f6-21044a66e4b6",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -301,7 +301,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336eee",
+          "guid": "9995876a-6039-4f6b-b7b0-aaf15b7edbcc",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -314,7 +314,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336fff",
+          "guid": "39e5938c-6ad1-4685-9672-339ad9c3fe8c",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -327,7 +327,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336011",
+          "guid": "99c0efdd-e057-4037-b49f-8a48e411dab5",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -340,7 +340,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336022",
+          "guid": "d2ae91df-aab4-47fe-921f-0100147150b8",
           "type": "Panel",
           "rating": 3,
           "title": {
@@ -367,7 +367,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336033",
+          "guid": "40f5fe00-1d0c-4a98-aa9e-56bee5559494",
           "type": "Panel",
           "rating": 2,
           "title": {
@@ -380,7 +380,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336066",
+          "guid": "84fc9d2a-b1ae-4884-86be-7c659cf16bda",
           "type": "Panel",
           "rating": 2,
           "title": {
@@ -393,7 +393,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336055",
+          "guid": "afc747b3-4e88-4343-9774-3dab99110395",
           "type": "Panel",
           "rating": 1,
           "title": {
@@ -406,7 +406,7 @@
           }
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336077",
+          "guid": "7d422428-fdb9-47d2-990b-0bcbd46b6e77",
           "type": "Panel",
           "rating": 1,
           "title": {
@@ -421,16 +421,16 @@
       ]
     },
     {
-      "guid": "3339c9c6-6926-4de5-b9b1-43779c336cdd",
+      "guid": "f52a8db8-e7a7-4707-bba0-f6646fb1e2da",
       "header": {
         "title": "Významné projekty",
         "size": "Normal",
-        "guid": "2229c9c6-6926-4de5-b9b1-43779c336eee",
+        "guid": "3084a39f-64da-4875-886f-bce5f4c762f6",
         "type": "Header"
       },
       "items": [
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336aaa",
+          "guid": "1bb89e37-e550-4c45-892d-7ddc4e4c82c4",
           "type": "Panel",
           "title": {
             "text": "DORIS",
@@ -449,7 +449,7 @@
           "imageUrl": "/imgs/Doris.png"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336bbb",
+          "guid": "a0f57c52-194e-412f-aed7-55f96a9de175",
           "type": "Panel",
           "title": {
             "text": "In Kalkulačka",
@@ -466,7 +466,7 @@
           "imageUrl": "/imgs/InKalkulacka-logo.svg"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ccc",
+          "guid": "e23198c1-537c-48a3-9245-4864461adcdc",
           "type": "Panel",
           "title": {
             "text": "tianDe",
@@ -483,7 +483,7 @@
           "imageUrl": "/imgs/tiande.png"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
+          "guid": "b2150884-57fd-4161-ab41-b9c9c2c3c0fb",
           "type": "Panel",
           "title": {
             "text": "Hypoteční Kalkulačka",
@@ -500,7 +500,7 @@
           "imageUrl": "/imgs/ifas.svg"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336ddd",
+          "guid": "efd0ef79-83a9-4676-8b4c-05c86e84c1be",
           "type": "Panel",
           "title": {
             "text": "Adresář",
@@ -516,7 +516,7 @@
           "imageUrl": "/imgs/no.png"
         },
         {
-          "guid": "31e9c9c6-6926-4de5-b9b1-43779c336eee",
+          "guid": "6feb116e-cd23-444c-a484-5151232161ae",
           "type": "Panel",
           "title": {
             "text": "Adéla / In Portál - CRM portál",

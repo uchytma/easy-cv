@@ -1,5 +1,9 @@
 <template>
-  <article class="article cv-item-padding text-justify" v-html="props.item.text"></article>
+  <article
+    class="article cv-item-padding text-justify"
+    v-html="props.item.text"
+    :id="`item_${props.item.guid}`"
+  ></article>
 </template>
 
 <script lang="ts" setup>

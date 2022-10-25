@@ -13,7 +13,6 @@ import AppNav from "./components/AppNav.vue";
 import { useMainAppStore } from "@/stores/mainApp";
 import { computed } from "vue";
 import type { CSSProperties } from "vue";
-import { getAbsolutePosition } from "@/services/domUtils/domUtils";
 
 const store = useMainAppStore();
 
@@ -27,18 +26,11 @@ const MainLayoutStyles = computed(() => {
 
 const computedStyle = computed<CSSProperties>(() => {
   const ret: CSSProperties = {};
-  if (store.refreshKeyAsidePosition >= 0) {
-    //hack for recompute computed style, when resized
-    if (store.selectedItem && window.innerWidth >= 1120) {
-      const pos = getAbsolutePosition(store.selectedItem.htmlElement, window);
-      ret["top"] = `${pos.top}px`;
-    }
+  const posTop = store.asidePositionTop;
+  if (posTop) {
+    ret["top"] = `${posTop}px`;
   }
   return ret;
-});
-
-window.addEventListener("resize", () => {
-  store.refreshKeyAsidePosition++;
 });
 </script>
 

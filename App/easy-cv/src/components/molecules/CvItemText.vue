@@ -1,5 +1,9 @@
 <template>
-  <article :class="{ 'article-without-icon': !props.item.icon }" class="article cv-item-padding">
+  <article
+    :class="{ 'article-without-icon': !props.item.icon }"
+    class="article cv-item-padding"
+    :id="`item_${props.item.guid}`"
+  >
     <BaseIcon v-if="props.item.icon" :icon="props.item.icon"></BaseIcon>
     <BaseTextFragment v-if="props.item.text" :text-fragment="props.item.text"></BaseTextFragment>
     <BaseItemSeparator v-if="props.item.subtext"></BaseItemSeparator>

@@ -1,13 +1,13 @@
-import { ref, nextTick } from "vue";
+import { ref, nextTick, watch } from "vue";
 import { defineStore } from "pinia";
 import { getBackgrounds } from "@/services/background/backgroundService";
 import { getDefaultCv } from "@/services/cvModel/cvModelService";
 import type { CvModel, CvModelItem, CvModelSection } from "@/services/cvModel/cvModel";
-
+import { getAbsolutePosition } from "@/services/domUtils/domUtils";
+import * as arrayUtils from "@/services/utils/arrayUtils";
 export type SelectedItem = {
   item: CvModelItem;
   section: CvModelSection;
-  htmlElement: HTMLElement;
 };
 
 export const useMainAppStore = defineStore("mainApp", () => {
@@ -15,10 +15,7 @@ export const useMainAppStore = defineStore("mainApp", () => {
   const selectedBackground = ref(getBackgrounds()[0]);
   const selectedItem = ref<SelectedItem | null>(null);
 
-  /** Increment value to force recompute aside box position.
-   * It is used when section or item is moved
-   */
-  const refreshKeyAsidePosition = ref(0);
+  const asidePositionTop = ref<number | null>(0);
 
   async function loadDefaultModel(): Promise<CvModel> {
     const model = await getDefaultCv();
@@ -26,37 +23,57 @@ export const useMainAppStore = defineStore("mainApp", () => {
     return model;
   }
 
-  function sectionRemove(section: CvModelSection): void {
-    cvModel.value.sections = cvModel.value.sections.filter((s) => s !== section);
+  watch(selectedItem, () => {
+    recomputeAsidePositionTop();
+  });
+
+  window.addEventListener("resize", () => {
+    recomputeAsidePositionTop();
+  });
+
+  function recomputeAsidePositionTop() {
+    if (window.innerWidth < 1120) {
+      asidePositionTop.value = null;
+      return;
+    }
+    if (!selectedItem.value) return;
+    const htmlElement = document.getElementById(`item_${selectedItem.value.item.guid}`);
+    if (!htmlElement) return;
+    const pos = getAbsolutePosition(htmlElement, window);
+    asidePositionTop.value = pos.top;
   }
 
-  function removeItem(section: CvModelSection, item: CvModelItem): void {
-    section.items = section.items.filter((i) => i !== item);
+  function sectionRemove(section: CvModelSection): void {
+    cvModel.value.sections = cvModel.value.sections.filter((s) => s !== section);
+    selectedItem.value = null;
+  }
+
+  function itemRemove(item: SelectedItem): void {
+    item.section.items = item.section.items.filter((i) => i !== item.item);
+    selectedItem.value = null;
+  }
+
+  function callFuncAndRecalcAsidePositionTop(func: () => void) {
+    func();
+    nextTick(() => {
+      recomputeAsidePositionTop();
+    });
+  }
+
+  function itemMoveUp(item: SelectedItem): void {
+    callFuncAndRecalcAsidePositionTop(() => arrayUtils.moveUp(item.section.items, item.item));
+  }
+
+  function itemMoveDown(item: SelectedItem): void {
+    callFuncAndRecalcAsidePositionTop(() => arrayUtils.moveDown(item.section.items, item.item));
   }
 
   function sectionMoveUp(section: CvModelSection): void {
-    const index = cvModel.value.sections.indexOf(section);
-    if (index > 0) {
-      swapItems(cvModel.value.sections, index, index - 1);
-      nextTick(() => {
-        refreshKeyAsidePosition.value++;
-      });
-    }
+    callFuncAndRecalcAsidePositionTop(() => arrayUtils.moveUp(cvModel.value.sections, section));
   }
 
   function sectionMoveDown(section: CvModelSection): void {
-    const index = cvModel.value.sections.indexOf(section);
-    if (index < cvModel.value.sections.length - 1) {
-      swapItems(cvModel.value.sections, index, index + 1);
-      nextTick(() => {
-        refreshKeyAsidePosition.value++;
-      });
-    }
-  }
-
-  function swapItems<T>(array: Array<T>, index1: number, index2: number): Array<T> {
-    array.splice(index2, 0, array.splice(index1, 1)[0]);
-    return array;
+    callFuncAndRecalcAsidePositionTop(() => arrayUtils.moveDown(cvModel.value.sections, section));
   }
 
   return {
@@ -65,9 +82,11 @@ export const useMainAppStore = defineStore("mainApp", () => {
     loadDefaultModel,
     selectedItem,
     sectionRemove,
-    removeItem,
+    itemRemove,
     sectionMoveUp,
     sectionMoveDown,
-    refreshKeyAsidePosition,
+    itemMoveUp,
+    itemMoveDown,
+    asidePositionTop,
   };
 });

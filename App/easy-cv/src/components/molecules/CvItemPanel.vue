@@ -1,5 +1,5 @@
 <template>
-  <article class="article-wrapper cv-item-padding">
+  <article class="article-wrapper cv-item-padding" :id="`item_${props.item.guid}`">
     <div v-if="props.item.imageUrl" class="g-img">
       <img :src="props.item.imageUrl" />
     </div>

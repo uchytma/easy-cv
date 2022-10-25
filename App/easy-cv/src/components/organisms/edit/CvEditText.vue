@@ -1,5 +1,9 @@
 <template>
-  <CvEditWrapper>
+  <CvEditWrapper
+    :remove="() => store.itemRemove(props.selectedItem)"
+    :move-up="() => store.itemMoveUp(props.selectedItem)"
+    :move-down="() => store.itemMoveDown(props.selectedItem)"
+  >
     <CvEditGroup>
       <CvEditTextFragment
         checkboxLabel="Zobrazit text"
@@ -21,9 +25,6 @@
     <CvEditGroup>
       <NullableSelectList :options="iconOptions" v-model="item.icon" title="Ikona" id="icon" />
     </CvEditGroup>
-    <template #controls>
-      <a @click="removeItem" href="javascript:void(0)"><BaseIcon :icon="Icon.Trash" /></a>
-    </template>
   </CvEditWrapper>
 </template>
 <script lang="ts" setup>
@@ -31,8 +32,7 @@ import type { SelectedItem } from "@/stores/mainApp";
 import { computed } from "vue";
 import CvEditWrapper from "./CvEditWrapper.vue";
 import NullableSelectList from "../../molecules/inputs/NullableSelectList.vue";
-import BaseIcon from "../../atoms/BaseIcon.vue";
-import { Icon, iconOptions } from "@/services/commonTypes/icons";
+import { iconOptions } from "@/services/commonTypes/icons";
 import { useMainAppStore } from "@/stores/mainApp";
 import type { CvModelItemText } from "@/services/cvModel/cvModel";
 import CvEditGroup from "./CvEditGroup.vue";
@@ -46,9 +46,4 @@ const props = defineProps<{
 }>();
 
 const item = computed(() => props.selectedItem.item as CvModelItemText);
-
-function removeItem(): void {
-  store.removeItem(props.selectedItem.section, item.value);
-  store.selectedItem = null;
-}
 </script>
