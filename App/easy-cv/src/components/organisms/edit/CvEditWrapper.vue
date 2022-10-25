@@ -1,9 +1,9 @@
 <template>
   <div class="edit-wrapper">
     <ControlBar class="control-bar" @on-close="store.selectedItem = null">
-      <a @click="props.remove" href="javascript:void(0)"><BaseIcon :icon="Icon.Trash" /></a>
-      <a @click="props.moveUp" href="javascript:void(0)"><BaseIcon :icon="Icon.Up" /></a>
-      <a @click="props.moveDown" href="javascript:void(0)"><BaseIcon :icon="Icon.Down" /></a>
+      <a v-if="props.remove" @click="props.remove" href="javascript:void(0)"><BaseIcon :icon="Icon.Trash" /></a>
+      <a v-if="props.moveUp" @click="props.moveUp" href="javascript:void(0)"><BaseIcon :icon="Icon.Up" /></a>
+      <a v-if="props.moveDown" @click="props.moveDown" href="javascript:void(0)"><BaseIcon :icon="Icon.Down" /></a>
       <slot name="controls"></slot>
     </ControlBar>
     <div class="items-wrapper">
@@ -18,9 +18,9 @@ import { Icon } from "@/services/commonTypes/icons";
 import BaseIcon from "@/components/atoms/BaseIcon.vue";
 import { useMainAppStore } from "@/stores/mainApp";
 const props = defineProps<{
-  remove: () => void;
-  moveUp: () => void;
-  moveDown: () => void;
+  remove: (() => void) | null;
+  moveUp: (() => void) | null;
+  moveDown: (() => void) | null;
 }>();
 
 const store = useMainAppStore();

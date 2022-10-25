@@ -21,7 +21,6 @@ function onItemSelected(event: EventItemSelected, section: CvModelSection): void
   store.selectedItem = {
     item: event.item,
     section: section,
-    htmlElement: event.htmlElement,
   };
 }
 </script>

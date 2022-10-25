@@ -1,5 +1,5 @@
 <template>
-  <CvEditWrapper>
+  <CvEditWrapper :remove="null" :move-up="null" :move-down="null">
     <CvEditGroup>
       <p>Editace dané položky není podporována.</p>
     </CvEditGroup>
