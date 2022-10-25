@@ -17,6 +17,7 @@ import {
   faTrashCan,
   faCircleChevronUp,
   faCircleChevronDown,
+  faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -29,7 +30,8 @@ library.add(
   faXmark,
   faTrashCan,
   faCircleChevronUp,
-  faCircleChevronDown
+  faCircleChevronDown,
+  faPlusCircle
 );
 
 import { useMainAppStore } from "@/stores/mainApp";

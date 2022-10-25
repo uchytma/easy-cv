@@ -8,6 +8,7 @@ export enum Icon {
   Trash = "Trash",
   Up = "Up",
   Down = "Down",
+  Plus = "Plus",
 }
 
 export const IconLabels = new Map<string, string>([
@@ -20,6 +21,7 @@ export const IconLabels = new Map<string, string>([
   [Icon.Trash, "Popelnice"],
   [Icon.Up, "Nahoru"],
   [Icon.Down, "Dolů"],
+  [Icon.Plus, "Plus"],
 ]);
 
 export const iconOptions = Object.keys(Icon).map((key) => ({ value: key, text: IconLabels.get(key) ?? "??" }));

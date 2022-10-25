@@ -30,6 +30,8 @@ const iconClass = computed(() => {
       return "fa-solid fa-circle-chevron-up";
     case Icon.Down:
       return "fa-solid fa-circle-chevron-down";
+    case Icon.Plus:
+      return "fa-solid fa-plus-circle";
     default:
       return null;
   }
