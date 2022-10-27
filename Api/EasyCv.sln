@@ -5,7 +5,11 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Api", "EasyCv\EasyCv.Api.csproj", "{A0920B5A-F69D-4FFA-8452-83AB7E9E3A9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Core", "EasyCv.Core\EasyCv.Core.csproj", "{F84C4547-865C-4DDE-B2B0-203CED17292B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Core", "EasyCv.Core\EasyCv.Core.csproj", "{F84C4547-865C-4DDE-B2B0-203CED17292B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Infrastructure", "EasyCv.Infrastructure\EasyCv.Infrastructure.csproj", "{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Core.Tests", "EasyCv.Core.Tests\EasyCv.Core.Tests.csproj", "{8960317B-2A57-4444-8791-86CA0E0C3085}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{F84C4547-865C-4DDE-B2B0-203CED17292B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84C4547-865C-4DDE-B2B0-203CED17292B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84C4547-865C-4DDE-B2B0-203CED17292B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8960317B-2A57-4444-8791-86CA0E0C3085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8960317B-2A57-4444-8791-86CA0E0C3085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8960317B-2A57-4444-8791-86CA0E0C3085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8960317B-2A57-4444-8791-86CA0E0C3085}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
