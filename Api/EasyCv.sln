@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Api", "EasyCv\EasyCv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Core", "EasyCv.Core\EasyCv.Core.csproj", "{F84C4547-865C-4DDE-B2B0-203CED17292B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Infrastructure", "EasyCv.Infrastructure\EasyCv.Infrastructure.csproj", "{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Infrastructure", "EasyCv.Infrastructure\EasyCv.Infrastructure.csproj", "{BAF1BF11-D5F6-421B-A563-47D0EAF66B79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Core.Tests", "EasyCv.Core.Tests\EasyCv.Core.Tests.csproj", "{8960317B-2A57-4444-8791-86CA0E0C3085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCv.Core.Tests", "EasyCv.Core.Tests\EasyCv.Core.Tests.csproj", "{8960317B-2A57-4444-8791-86CA0E0C3085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCv.Infrastructure.Db", "EasyCv.Infrastructure.Db\EasyCv.Infrastructure.Db.csproj", "{B30BAB61-90D7-4748-AB23-0C74C031A8D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8960317B-2A57-4444-8791-86CA0E0C3085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8960317B-2A57-4444-8791-86CA0E0C3085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8960317B-2A57-4444-8791-86CA0E0C3085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30BAB61-90D7-4748-AB23-0C74C031A8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30BAB61-90D7-4748-AB23-0C74C031A8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30BAB61-90D7-4748-AB23-0C74C031A8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30BAB61-90D7-4748-AB23-0C74C031A8D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

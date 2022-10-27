@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EasyCv.Core\EasyCv.Core.csproj" />
+    <ProjectReference Include="..\EasyCv.Infrastructure.Db\EasyCv.Infrastructure.Db.csproj" />
   </ItemGroup>
 
 </Project>
