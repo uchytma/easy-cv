@@ -1,5 +1,9 @@
 ﻿using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain;
+using EasyCv.Core.ResumeDomain.Exceptions;
+using EasyCv.Infrastructure.Db;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +12,30 @@ using System.Threading.Tasks;
 
 namespace EasyCv.Infrastructure.Repositories
 {
-    public class ResumeSecurityKeyRepositorySQlite : IResumeSecurityKeyRepository
+    internal class ResumeSecurityKeyRepositorySQlite : IResumeSecurityKeyRepository
     {
-        public Task<Guid> GetResumeSecurityKey(Resume resume)
+        private readonly IDbContextFactory<EasyCvContext> _dbContextFactory;
+
+        public ResumeSecurityKeyRepositorySQlite(IDbContextFactory<EasyCvContext> dbContextFactory)
         {
-            throw new NotImplementedException();
+            _dbContextFactory = dbContextFactory;
         }
 
-        public Task SetResumeSecurityKey(Resume resume, Guid editKey)
+        public async Task<Guid> GetResumeSecurityKey(Resume resume)
         {
-            throw new NotImplementedException();
+            using var db = _dbContextFactory.CreateDbContext();
+            var r = await db.Resumes.FindAsync(resume.Id);
+            if (r is null || r.SecurityKey is null) throw new SecurityKeyNotFoundException();
+            return r.SecurityKey.Value;
+        }
+
+        public async Task SetResumeSecurityKey(Resume resume, Guid editKey)
+        {
+            using var db = _dbContextFactory.CreateDbContext();
+            var r = await db.Resumes.FindAsync(resume.Id);
+            if (r is null) throw new ResumeNotFoundException();
+            r.SecurityKey = editKey;
+            await db.SaveChangesAsync();
         }
     }
 }

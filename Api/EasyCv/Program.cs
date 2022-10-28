@@ -1,4 +1,8 @@
+using EasyCv.Core.Interfaces.Infrastructure;
+using EasyCv.Core.ResumeDomain.Services;
 using GraphQL;
+using EasyCv.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace EasyCv
 {
@@ -13,8 +17,11 @@ namespace EasyCv
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddGraphQL(b => b
                 .AddAutoSchema<Query>() 
-                .AddSystemTextJson());   
+                .AddSystemTextJson());
 
+            builder.Services.AddInfrastructureServices(opt => ApplySqliteOptions(opt));
+            builder.Services.AddSingleton<IResumeProvider, ResumeProvider>();
+           
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -39,6 +46,14 @@ namespace EasyCv
             });
 
             app.Run();
+        }
+
+        private static void ApplySqliteOptions(DbContextOptionsBuilder opts)
+        {
+            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var path = Environment.GetFolderPath(folder);
+            var dbPath = System.IO.Path.Join(path, "easycv.db");
+            opts.UseSqlite(($"Data Source=.\\easycv.db"));
         }
 
 
