@@ -10,9 +10,8 @@ namespace EasyCv.Core.ResumeDomain.Services
         /// <exception cref="SecurityKeyIsNotValidException">Throws exception, if provided security key is not valid.</exception>
         /// <param name="email"></param>
         /// <param name="jsonData"></param>
-        /// <param name="securityKey">Must be non-empty Guid</param>
         /// <returns>Created resume object</returns>
-        Task<Resume> Create(string email, string jsonData, Guid securityKey);
+        Task<(Resume Resume, Guid SecurityKey)> Create(string email, string jsonData);
 
         /// <summary>
         /// 

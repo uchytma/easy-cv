@@ -57,20 +57,18 @@ namespace EasyCv.Core.Tests
             //arrange
             string email = "test@test.cz";
             string jsonData = "{}";
-            Guid securityKey = new Guid("29321752-ca5c-4777-9a1b-ffcbec2a5d50");
-
+          
             //act
-            var resume = await ResumeProvider.Create(email, jsonData, securityKey);
+            var resume = await ResumeProvider.Create(email, jsonData);
 
             //assert
-            var itemInRepo = await ResumeRepository.GetById(resume.Id);
-            Assert.AreNotEqual(Guid.Empty, resume.Id);
-            Assert.AreEqual(resume, itemInRepo);
+            var itemInRepo = await ResumeRepository.GetById(resume.Resume.Id);
+            Assert.AreNotEqual(Guid.Empty, resume.Resume.Id);
+            Assert.AreEqual(resume.Resume, itemInRepo);
             Assert.AreEqual(email, itemInRepo.Email);
             Assert.AreEqual(jsonData, itemInRepo.JsonData);
 
             var securityKeyInRepo = await SecurityKeyRepository.GetResumeSecurityKey(itemInRepo);
-            Assert.AreEqual(securityKey, securityKeyInRepo);
         }
 
         [TestMethod]

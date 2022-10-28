@@ -28,16 +28,15 @@ namespace EasyCv.Core.ResumeDomain.Services
             return _repo.GetById(id);
         }
 
-        public async Task<Resume> Create(string email, string jsonData, Guid securityKey)
+        public async Task<(Resume Resume, Guid SecurityKey)> Create(string email, string jsonData)
         {
-            if (securityKey == Guid.Empty)
-                throw new SecurityKeyIsNotValidException();
+            Guid securityKey = Guid.NewGuid();
 
             Guid guid = Guid.NewGuid();
             await _repo.Create(new Resume(guid, email, jsonData));
             var resume = await GetById(guid);
             await _repoSecurityKey.SetResumeSecurityKey(resume, securityKey);
-            return resume;
+            return (resume, securityKey);
         }
 
         public async Task Update(Resume resume)

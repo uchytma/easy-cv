@@ -1,8 +1,9 @@
+using EasyCv.Api.GraphQL.Types;
 using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain.Services;
-using GraphQL;
 using EasyCv.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace EasyCv
 {
@@ -11,17 +12,15 @@ namespace EasyCv
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            builder.Services.AddControllers();
-
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddGraphQL(b => b
-                .AddAutoSchema<Query>() 
-                .AddSystemTextJson());
-
-            builder.Services.AddInfrastructureServices(opt => ApplySqliteOptions(opt));
+ 
+            builder.Services.AddInfrastructureServices(opt => ApplySqliteOptions(opt, builder));
             builder.Services.AddSingleton<IResumeProvider, ResumeProvider>();
-           
+
+            builder.Services
+                .AddGraphQLServer()
+                .AddQueryType<QueryType>()
+                .AddMutationType<MutationType>();
+
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -40,26 +39,18 @@ namespace EasyCv
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGraphQL("graphql");
-                endpoints.MapGraphQLGraphiQL("graphql/ui");
+                endpoints.MapGraphQL();
                 endpoints.MapFallbackToFile("./index.html", new StaticFileOptions());
             });
 
             app.Run();
         }
 
-        private static void ApplySqliteOptions(DbContextOptionsBuilder opts)
+   
+        private static void ApplySqliteOptions(DbContextOptionsBuilder opts, WebApplicationBuilder builder)
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            var dbPath = System.IO.Path.Join(path, "easycv.db");
-            opts.UseSqlite(($"Data Source=.\\easycv.db"));
-        }
-
-
-        public class Query
-        {
-            public static string Hello() => "Hello from QraphQL server!";
+            string connString = builder.Configuration.GetConnectionString("EasyCv");
+            opts.UseSqlite(connString);
         }
     }
 }

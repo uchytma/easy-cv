@@ -4,11 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <TreatWarningsAsErrors >true</TreatWarningsAsErrors >
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.Server.All" Version="7.1.1" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.15.0" />
   </ItemGroup>
 
   <ItemGroup>
