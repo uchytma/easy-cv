@@ -72,7 +72,9 @@ More EF CLI commands can be found at [doc](https://learn.microsoft.com/en-us/ef/
 ### Azure Table Storage
 (https://azure.microsoft.com/en-us/products/storage/tables/#overview)
 
-Application can use Azure Table as data storage. It requires the following configuration:
+Application can use Azure Table as data storage. This is recommended for production using scenario (both standalone web app / Docker container).
+
+It requires the following configuration:
 
 ```
   "Storages:AzureTableStorage:ConnectionString": "DefaultEndpointsProtocol=https;AccountName=easycv;AccountKey= ... ;EndpointSuffix=core.windows.net",
