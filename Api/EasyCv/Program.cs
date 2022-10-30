@@ -18,10 +18,21 @@ namespace EasyCv
     
             builder.Services.AddSingleton<IResumeProvider, ResumeProvider>();
 
-            builder.Services
-                .AddGraphQLServer()
-                .AddQueryType<QueryType>()
-                .AddMutationType<MutationType>();
+            if (builder.Environment.IsDevelopment())
+            {
+                builder.Services
+                   .AddGraphQLServer()
+                   .AddQueryType<QueryType>()
+                   .AddMutationType<MutationType>();
+            }
+            else
+            {
+                //mutation are temporary disabled, until authentication is implemented
+                builder.Services
+                   .AddGraphQLServer()
+                   .AddQueryType<QueryType>();
+            }
+     
 
             var app = builder.Build();
 
@@ -41,12 +52,7 @@ namespace EasyCv
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGraphQL().AllowAnonymous()
-                .WithOptions(new GraphQLServerOptions()
-                {
-                    EnableSchemaRequests = true,
-                    Tool = { Enable = true }
-                }); ;
+                endpoints.MapGraphQL();
                 endpoints.MapFallbackToFile("./index.html", new StaticFileOptions());
             });
 
