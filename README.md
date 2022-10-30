@@ -50,6 +50,15 @@ dotnet ef migrations add <migrationName> --connection "<connectionString>"
 ```
 
 More EF CLI commands can be found at [doc](https://learn.microsoft.com/en-us/ef/core/cli/dotnet).
+
+## Configuration
+
+### DB connection string
+you must provide Db Connection string under `ConnectionStrings:EasyCv` key.
+
+Example: `"ConnectionStrings:EasyCv": "Data Source=C:\\dev\\easycv\\easycv.db"`
+
+
 ## Screenshots
 
 ![image](https://user-images.githubusercontent.com/28567403/197527180-c10ab4c9-b365-4c52-9d65-f86f9cc517e5.png)
