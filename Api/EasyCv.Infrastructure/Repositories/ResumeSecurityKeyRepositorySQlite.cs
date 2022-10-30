@@ -1,14 +1,8 @@
 ﻿using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain;
 using EasyCv.Core.ResumeDomain.Exceptions;
-using EasyCv.Infrastructure.Db;
+using EasyCv.Infrastructure.Storage.SQlite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EasyCv.Infrastructure.Repositories
 {

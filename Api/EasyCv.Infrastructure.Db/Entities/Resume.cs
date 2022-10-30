@@ -5,7 +5,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EasyCv.Infrastructure.Db.Entities
+namespace EasyCv.Infrastructure.Storage.SQlite.Entities
 {
     public class Resume
     {

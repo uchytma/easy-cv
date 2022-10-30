@@ -4,12 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<TreatWarningsAsErrors >true</TreatWarningsAsErrors >
+	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EasyCv.Core\EasyCv.Core.csproj" />
-    <ProjectReference Include="..\EasyCv.Infrastructure.Db\EasyCv.Infrastructure.Db.csproj" />
+    <ProjectReference Include="..\EasyCv.Infrastructure.Db\EasyCv.Infrastructure.Storage.SQlite.csproj" />
+    <ProjectReference Include="..\EasyCv.Infrastructure.TableStorage\EasyCv.Infrastructure.Storage.AzureTableStorage.csproj" />
   </ItemGroup>
 
 </Project>

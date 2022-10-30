@@ -1,5 +1,4 @@
-﻿using EasyCv.Infrastructure.Db;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EasyCv.Infrastructure
+namespace EasyCv.Infrastructure.Storage.SQlite
 {
     public static class ServiceCollectionExtension
     {

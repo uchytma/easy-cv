@@ -1,8 +1,7 @@
-﻿using EasyCv.Infrastructure.Db.Entities;
+﻿using EasyCv.Infrastructure.Storage.SQlite.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
 
-namespace EasyCv.Infrastructure.Db
+namespace EasyCv.Infrastructure.Storage.SQlite
 {
     public class EasyCvContext : DbContext
     {
@@ -15,20 +14,5 @@ namespace EasyCv.Infrastructure.Db
         }
 
         public DbSet<Resume> Resumes { get; set; } = default!;
-    }
-
-
-    /// <summary>
-    /// Only for dev purposes
-    /// </summary>
-    public class BloggingContextFactory : IDesignTimeDbContextFactory<EasyCvContext>
-    {
-        public EasyCvContext CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<EasyCvContext>();
-            optionsBuilder.UseSqlite("Data Source=C:\\dev\\easycv\\easycv.db");
-
-            return new EasyCvContext(optionsBuilder.Options);
-        }
     }
 }

@@ -2,6 +2,7 @@ using EasyCv.Api.GraphQL.Types;
 using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain.Services;
 using EasyCv.Infrastructure;
+using EasyCv.Infrastructure.Storage.SQlite.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -13,7 +14,7 @@ namespace EasyCv
         {
             var builder = WebApplication.CreateBuilder(args);
  
-            builder.Services.AddInfrastructureServices(opt => ApplySqliteOptions(opt, builder));
+            builder.Services.AddInfrastructureServicesSQlite(opt => ApplySqliteOptions(opt, builder));
             builder.Services.AddSingleton<IResumeProvider, ResumeProvider>();
 
             builder.Services
@@ -47,9 +48,15 @@ namespace EasyCv
         }
 
    
+        /// <summary>
+        /// </summary>
+        /// <param name="opts"></param>
+        /// <param name="builder"></param>
+        /// <exception cref="ConnectionStringNotSpecifiedException">Throws when conn string with name EasyCv is not found.</exception>
         private static void ApplySqliteOptions(DbContextOptionsBuilder opts, WebApplicationBuilder builder)
         {
             string connString = builder.Configuration.GetConnectionString("EasyCv");
+            if (string.IsNullOrEmpty(connString)) throw new ConnectionStringNotSpecifiedException();
             opts.UseSqlite(connString);
         }
     }
