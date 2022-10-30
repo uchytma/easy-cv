@@ -1,11 +1,9 @@
 using EasyCv.Api.GraphQL.Types;
-using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain.Services;
 using EasyCv.Infrastructure;
 using EasyCv.Infrastructure.Storage.AzureTableStorage;
 using EasyCv.Infrastructure.Storage.SQlite.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace EasyCv
 {
@@ -51,29 +49,26 @@ namespace EasyCv
 
         private static void ConfigureInfrastructure(WebApplicationBuilder builder)
         {
-            string connSQlite = builder.Configuration.GetConnectionString("SQlite");
+            //SQlite
+            var configSQlite = builder.Configuration.GetSection("Storages:SQlite");
+            var connSQlite = configSQlite["ConnectionString"];
             if (!string.IsNullOrEmpty(connSQlite))
             {
-                builder.Services.AddInfrastructureServicesSQlite(opt => ApplySqliteOptions(opt, connSQlite));
+                builder.Services.AddInfrastructureServicesSQlite(opt => opt.UseSqlite(connSQlite));
                 return;
             }
-            string connStringTableStorage = builder.Configuration.GetConnectionString("AzureTableStorage");
+
+            //Azure table storage
+            var configAzureTable = builder.Configuration.GetSection("Storages:AzureTableStorage");
+            string connStringTableStorage = configAzureTable["ConnectionString"];
+            string tableName = configAzureTable["TableName"];
             if (!string.IsNullOrEmpty(connStringTableStorage))
             {
-                var cfg = new StorageConfiguration(connStringTableStorage, "easycvtest");
+                var cfg = new StorageConfiguration(connStringTableStorage, tableName);
                 builder.Services.AddInfrastructureServicesAzureTableStorage(cfg);
                 return;
             }
             throw new ConnectionStringNotSpecifiedException();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="opts"></param>
-        private static void ApplySqliteOptions(DbContextOptionsBuilder opts, string connString)
-        {
-            if (string.IsNullOrEmpty(connString)) throw new ConnectionStringNotSpecifiedException();
-            opts.UseSqlite(connString);
         }
     }
 }
