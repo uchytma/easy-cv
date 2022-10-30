@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EasyCv.Infrastructure.Repositories
 {
-    internal class ResumeRepositorySQlite : IResumeRepository
+    internal class SQliteRepo : IResumeRepository, IResumeSecurityKeyRepository
     {
         private readonly IDbContextFactory<EasyCvContext> _dbContextFactory;
 
-        public ResumeRepositorySQlite(IDbContextFactory<EasyCvContext> dbContextFactory)
+        public SQliteRepo(IDbContextFactory<EasyCvContext> dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
         }
@@ -36,6 +36,23 @@ namespace EasyCv.Infrastructure.Repositories
             if (r is null) throw new ResumeNotFoundException();
             r.Email = resume.Email;
             r.JsonData = resume.JsonData;
+            await db.SaveChangesAsync();
+        }
+
+        public async Task<Guid> GetResumeSecurityKey(Core.ResumeDomain.Resume resume)
+        {
+            using var db = _dbContextFactory.CreateDbContext();
+            var r = await db.Resumes.FindAsync(resume.Id);
+            if (r is null || r.SecurityKey is null) throw new SecurityKeyNotFoundException();
+            return r.SecurityKey.Value;
+        }
+
+        public async Task SetResumeSecurityKey(Core.ResumeDomain.Resume resume, Guid editKey)
+        {
+            using var db = _dbContextFactory.CreateDbContext();
+            var r = await db.Resumes.FindAsync(resume.Id);
+            if (r is null) throw new ResumeNotFoundException();
+            r.SecurityKey = editKey;
             await db.SaveChangesAsync();
         }
     }

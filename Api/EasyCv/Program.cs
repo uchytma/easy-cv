@@ -2,6 +2,7 @@ using EasyCv.Api.GraphQL.Types;
 using EasyCv.Core.Interfaces.Infrastructure;
 using EasyCv.Core.ResumeDomain.Services;
 using EasyCv.Infrastructure;
+using EasyCv.Infrastructure.Storage.AzureTableStorage;
 using EasyCv.Infrastructure.Storage.SQlite.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,8 +14,9 @@ namespace EasyCv
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
- 
-            builder.Services.AddInfrastructureServicesSQlite(opt => ApplySqliteOptions(opt, builder));
+
+            ConfigureInfrastructure(builder);
+    
             builder.Services.AddSingleton<IResumeProvider, ResumeProvider>();
 
             builder.Services
@@ -47,15 +49,29 @@ namespace EasyCv
             app.Run();
         }
 
-   
+        private static void ConfigureInfrastructure(WebApplicationBuilder builder)
+        {
+            string connSQlite = builder.Configuration.GetConnectionString("SQlite");
+            if (!string.IsNullOrEmpty(connSQlite))
+            {
+                builder.Services.AddInfrastructureServicesSQlite(opt => ApplySqliteOptions(opt, connSQlite));
+                return;
+            }
+            string connStringTableStorage = builder.Configuration.GetConnectionString("AzureTableStorage");
+            if (!string.IsNullOrEmpty(connStringTableStorage))
+            {
+                var cfg = new StorageConfiguration(connStringTableStorage, "easycvtest");
+                builder.Services.AddInfrastructureServicesAzureTableStorage(cfg);
+                return;
+            }
+            throw new ConnectionStringNotSpecifiedException();
+        }
+
         /// <summary>
         /// </summary>
         /// <param name="opts"></param>
-        /// <param name="builder"></param>
-        /// <exception cref="ConnectionStringNotSpecifiedException">Throws when conn string with name EasyCv is not found.</exception>
-        private static void ApplySqliteOptions(DbContextOptionsBuilder opts, WebApplicationBuilder builder)
+        private static void ApplySqliteOptions(DbContextOptionsBuilder opts, string connString)
         {
-            string connString = builder.Configuration.GetConnectionString("EasyCv");
             if (string.IsNullOrEmpty(connString)) throw new ConnectionStringNotSpecifiedException();
             opts.UseSqlite(connString);
         }
