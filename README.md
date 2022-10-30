@@ -25,9 +25,27 @@ Application is running at root url: `/`
 
 GraphQL API: `/graphql`
 
-## DB creating & migrations
+## Data storage
+There are multiple ways, how to storage data:
+- SQlite
+- Azure Table Storage
 
-The application uses SQlite as its database.
+Data are stored at first configured provider from the list above.
+
+### SQlite
+
+SQlite is a light self-contained database stored at a file in the filesystem. 
+It can be used for development purposes as well as production, but does not work well with Docker deployment and hosting.
+
+Using SQlite required connectionString in configuration:
+
+```
+"Storages:SQlite:ConnectionString": "<connectionString>",
+```
+
+For example: `Storages:SQlite:ConnectionString": "Data Source=C:\\dev\\easycv\\easycv.db"`
+
+#### Commands for creating DB / migrations
 Database migrations are managed by ORM Entity Framework Core.
 
 All commands must be run from easy-cv/Api/EasyCv.Infrastructure.Db directory.
@@ -51,13 +69,15 @@ dotnet ef migrations add <migrationName> --connection "<connectionString>"
 
 More EF CLI commands can be found at [doc](https://learn.microsoft.com/en-us/ef/core/cli/dotnet).
 
-## Configuration
+### Azure Table Storage
+(https://azure.microsoft.com/en-us/products/storage/tables/#overview)
 
-### DB connection string
-you must provide Db Connection string under `ConnectionStrings:EasyCv` key.
+Application can use Azure Table as data storage. It requires the following configuration:
 
-Example: `"ConnectionStrings:EasyCv": "Data Source=C:\\dev\\easycv\\easycv.db"`
-
+```
+  "Storages:AzureTableStorage:ConnectionString": "DefaultEndpointsProtocol=https;AccountName=easycv;AccountKey= ... ;EndpointSuffix=core.windows.net",
+  "Storages:AzureTableStorage:TableName": "<tableName>"
+```
 
 ## Screenshots
 
