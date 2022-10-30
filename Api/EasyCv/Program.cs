@@ -3,6 +3,7 @@ using EasyCv.Core.ResumeDomain.Services;
 using EasyCv.Infrastructure;
 using EasyCv.Infrastructure.Storage.AzureTableStorage;
 using EasyCv.Infrastructure.Storage.SQlite.Exceptions;
+using HotChocolate.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EasyCv
@@ -40,7 +41,12 @@ namespace EasyCv
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGraphQL();
+                endpoints.MapGraphQL().AllowAnonymous()
+                .WithOptions(new GraphQLServerOptions()
+                {
+                    EnableSchemaRequests = true,
+                    Tool = { Enable = true }
+                }); ;
                 endpoints.MapFallbackToFile("./index.html", new StaticFileOptions());
             });
 
